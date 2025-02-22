@@ -1,0 +1,3447 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        "Cognex.VisionPro.EdgeInspect"
+    </assembly>
+    <members>
+        <member name="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectTool.LastRunRecordDiagEnable">
+            <summary>
+Enable the creation of graphical tool records by bitwise ORing the
+desired values from
+<see cref="T:Cognex.VisionPro.EdgeInspect.CogBeadInspectLastRunRecordDiagConstants" />.
+</summary>
+            <value>A bitwise combination of the values from
+<see cref="T:Cognex.VisionPro.EdgeInspect.CogBeadInspectLastRunRecordDiagConstants" />.
+Default value is InputImageByReference.</value>
+            <event cref="E:Cognex.VisionPro.ICogChangedEvent.Changed">
+Fires when this property changes.
+The following state flag may be affected:
+<list type="bullet"><item><see cref="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectTool.SfLastRunRecordDiagEnable" /></item></list></event>
+            <exception cref="T:System.ObjectDisposedException">
+If the object has been disposed.
+</exception>
+        </member>
+        <member name="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectTool.LastRunRecordEnable">
+            <summary>
+Enable the creation of graphical tool records by bitwise ORing the
+desired values from
+<see cref="T:Cognex.VisionPro.EdgeInspect.CogBeadInspectLastRunRecordConstants" />.
+</summary>
+            <value>A bitwise combination of the values from
+<see cref="T:Cognex.VisionPro.EdgeInspect.CogBeadInspectLastRunRecordConstants" />.
+Default value is None. </value>
+            <event cref="E:Cognex.VisionPro.ICogChangedEvent.Changed">
+Fires when this property changes.
+The following state flags may be affected:
+<list type="bullet"><item><see cref="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectTool.SfLastRunRecordEnable" /></item><item><see cref="F:Cognex.VisionPro.Implementation.CogToolBase.SfCreateLastRunRecord" /></item></list></event>
+            <exception cref="T:System.ObjectDisposedException">
+If the object has been disposed.
+</exception>
+        </member>
+        <member name="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectTool.CurrentRecordEnable">
+            <summary>
+Enable the creation of graphical tool records by bitwise ORing the
+desired values from
+<see cref="T:Cognex.VisionPro.EdgeInspect.CogBeadInspectCurrentRecordConstants" />.
+</summary>
+            <value>A bitwise combination of the values from
+<see cref="T:Cognex.VisionPro.EdgeInspect.CogBeadInspectCurrentRecordConstants" />.
+Default value is InputImage</value>
+            <event cref="E:Cognex.VisionPro.ICogChangedEvent.Changed">
+Fires when this property changes.
+The following state flags may be affected:
+<list type="bullet"><item><see cref="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectTool.SfCurrentRecordEnable" /></item><item><see cref="F:Cognex.VisionPro.Implementation.CogToolBase.SfCreateCurrentRecord" /></item></list></event>
+            <exception cref="T:System.ObjectDisposedException">
+If the object has been disposed.
+</exception>
+        </member>
+        <member name="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectTool.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+Serialization constructor for CogBeadInspectTool object.
+</summary>
+            <param name="info">
+The standard SerializationInfo argument.
+</param>
+            <param name="ctxt">
+The standard StreamingContext argument.
+</param>
+        </member>
+        <member name="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectTool.Clone">
+            <summary>
+Returns a deep copy of this CogBeadInspectTool object.
+</summary>
+            <returns>
+A new CogBeadInspectTool instance that is a deep copy.
+</returns>
+        </member>
+        <member name="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectTool.Dispose">
+            <summary>
+Releases all resources used by this CogBeadInspectTool object.
+</summary>
+        </member>
+        <member name="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectTool.#ctor(Cognex.VisionPro.EdgeInspect.CogBeadInspectTool)">
+            <summary>
+Constructs a deep copy of the supplied CogBeadInspectTool object.
+</summary>
+            <param name="other">
+The object to copy.  Must not be null.
+</param>
+            <exception cref="T:System.ArgumentNullException">
+                <paramref name="other" /> is null.
+</exception>
+            <exception cref="T:System.ObjectDisposedException">
+                <paramref name="other" /> has been disposed.
+</exception>
+        </member>
+        <member name="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectTool.#ctor">
+            <summary>
+Constructs a default CogBeadInspectTool object.  This new tool 
+contains a default set of run params.
+</summary>
+        </member>
+        <member name="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectTool.SfInputImage">
+            <summary>
+This bit will be set in the EventArgs of a Changed event every time
+the value returned by InputImage may have changed.
+</summary>
+        </member>
+        <member name="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectTool.SfCurrentRecordEnable">
+            <summary>
+This bit will be set in the EventArgs of a Changed event every time
+the value returned by CurrentRecordEnable may have changed.
+</summary>
+        </member>
+        <member name="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectTool.SfLastRunRecordDiagEnable">
+            <summary>
+This bit will be set in the EventArgs of a Changed event every time
+the value returned by LastRunRecordDiagEnable may have changed.
+</summary>
+        </member>
+        <member name="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectTool.SfLastRunRecordEnable">
+            <summary>
+This bit will be set in the EventArgs of a Changed event every time
+the value returned by LastRunRecordEnable may have changed.
+</summary>
+        </member>
+        <member name="T:Cognex.VisionPro.EdgeInspect.CogBeadInspectTool">
+            <summary>
+Class that represents the top-level BeadInspect tool.  
+The BeadInspect tool accepts one input image.
+</summary>
+            <remarks>
+Limitations:
+<list type="bullet"><item>
+Automatically returns the bead train path with the best score. Does not allow the user to explore other calculated paths.
+</item></list></remarks>
+        </member>
+        <member name="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+Populates the provided SerializationInfo with the data needed to
+serialize the object.
+</summary>
+            <param name="info">The SerializationInfo to which serialization
+data must be added.</param>
+            <param name="ctxt">The StreamingContext that indicates the intent
+of the current serialization operation.</param>
+        </member>
+        <member name="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+Serialization constructor for CogBeadInspectPattern object.
+</summary>
+            <param name="info">
+The standard SerializationInfo argument.
+</param>
+            <param name="ctxt">
+The standard StreamingContext argument.
+</param>
+        </member>
+        <member name="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.SetCoarseContour(Cognex.VisionPro.CogGeneralContour)">
+            <summary>
+Updates the internal bead find result data using the provided coarse contour path. 
+Calling this method will untrain the tool if the coarse path modified is the path used 
+at train time.
+</summary>
+            <param name="path">
+The coarse contour which will be used at train time.
+</param>
+            <exception cref="T:Cognex.VisionPro.EdgeInspect.CogOperatorFindNotRunException">
+The
+<see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.FindResults" />
+property is null or empty; the
+<see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.Find" />
+method has not been called, it was called and no paths were located,
+or the pattern has since become unfound.
+</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+The 
+<see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.CurrentFindResultIndex" />
+or
+<see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.FindResultIndexUsedInTrain" />
+properties are outside the valid index range for the current
+<see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.FindResults" />
+property. The index must be between 0 and (FindResults.Count - 1), inclusive.
+</exception>
+            <exception cref="T:System.ArgumentNullException">
+                <paramref name="path" /> is null.
+</exception>
+            <exception cref="T:System.ArgumentException">
+                <paramref name="path" /> has arc segments.
+</exception>
+            <exception cref="T:System.ArgumentException">
+                <paramref name="path" /> if the contour is too short.
+</exception>
+            <exception cref="T:Cognex.VisionPro.Exceptions.CogSecurityViolationException">
+Licensing for this operation cannot be confirmed.  See
+<see cref="z:96cca39e-2aa6-4cb3-aabb-92960c4cfa63">Understanding
+VisionPro Security</see> for more information.
+</exception>
+            <exception cref="T:Cognex.VisionPro.Exceptions.CogImageNoPixelsException">
+if the train image has no allocated pixels.
+</exception>
+            <exception cref="T:Cognex.VisionPro.Exceptions.CogImageBadTypeException">
+if the train image is not a
+<see cref="T:Cognex.VisionPro.CogImage8Grey" />.
+</exception>
+            <remarks>
+                <para>
+This method utilizes the 
+<see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.CurrentFindResultIndex" />
+property to specify which path to modify. Additionally, it uses the 
+<see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.FindResultIndexUsedInTrain" />
+property in order to determine if the pattern must be untrained due to modification of the coarse path
+used for training.
+</para>
+            </remarks>
+        </member>
+        <member name="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.Execute(Cognex.VisionPro.ICogVisionData,Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams)">
+            <summary>
+Examine the given <paramref name="inputImage" /> for defects along the trained bead path.
+The analysis is performed using the supplied <paramref name="runParams" />.
+</summary>
+            <returns>
+The BeadInspect result that contains analysis of the runtime image.
+</returns>
+            <param name="inputImage">
+The image to be searched.
+Must be of type <see cref="T:Cognex.VisionPro.CogImage8Grey" />.
+</param>
+            <param name="runParams">
+The parameters that specify how to run this BeadInspect defect detection.
+</param>
+            <exception cref="T:System.ArgumentNullException">
+                <paramref name="inputImage" /> is null.
+</exception>
+            <exception cref="T:System.ArgumentNullException">
+                <paramref name="runParams" /> is null.
+</exception>
+            <exception cref="T:Cognex.VisionPro.Exceptions.CogSecurityViolationException">
+Licensing for this operation cannot be confirmed.  See
+<see cref="z:96cca39e-2aa6-4cb3-aabb-92960c4cfa63">Understanding
+VisionPro Security</see> for more information.
+</exception>
+            <exception cref="T:Cognex.VisionPro.Exceptions.CogImageNoPixelsException">
+                <paramref name="inputImage" /> has no allocated pixels.
+</exception>
+            <exception cref="T:Cognex.VisionPro.Exceptions.CogImageBadTypeException">
+                <paramref name="inputImage" /> is not a
+<see cref="T:Cognex.VisionPro.CogImage8Grey" />.
+</exception>
+            <exception cref="T:Cognex.VisionPro.Exceptions.CogOperatorNotTrainedException">
+This pattern operator is not trained.
+</exception>
+            <exception cref="T:Cognex.VisionPro.EdgeInspect.CogInvalidMaskOrFillEdgeLengthException">
+There was a mis-match between the number of calipers in the trained path and the length of
+the mask or fill edge lists in the provided <paramref name="runParams" />.
+</exception>
+            <exception cref="T:Cognex.VisionPro.EdgeInspect.CogIllegalRuntimeTrainingParamsException">
+The coordinate spacing has varied between training time and runtime which has caused the trained
+values of <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectFindParams.BeadWidth" /> or 
+<see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.FixedWidth" /> to no longer be
+valid values within the runtime coordinate space.
+</exception>
+CogIllegalRuntimeTrainingParamsException
+<remarks><para>
+For more detailed information on the defect categories, 
+please reference <see cref="T:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefectTypeConstants" />.
+</para><para>
+Note that this method expects the runtime path to be at
+exactly the trained position, it does not "search" for the path within a region.
+</para></remarks></member>
+        <member name="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.Train">
+            <summary>
+Trains this pattern. If the pattern is already trained then
+it will be untrained and retrained.
+<br />
+The train operation also computes a set 
+of run parameters that could be used at runtime. These parameters can be extracted 
+from the train result and used at run time.  
+<br />
+The FindResultIndexUsedInTrain will be set to the CurrentFindResultIndex.
+</summary>
+            <event cref="E:Cognex.VisionPro.ICogChangedEvent.Changed">
+Fires when this method changes the
+<see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.Trained" />
+state of the pattern.
+The following state flags may be affected:
+<list type="bullet"><item><see cref="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectPatternPattern.SfTrained" /></item><item><see cref="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectPatternPattern.SfTrainResult" /></item><item><see cref="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectPatternPattern.SfFindResultIndexUsedInTrain" /></item></list></event>
+            <exception cref="T:Cognex.VisionPro.Exceptions.CogSecurityViolationException">
+Licensing for this operation cannot be confirmed.  See
+<see cref="z:96cca39e-2aa6-4cb3-aabb-92960c4cfa63">Understanding
+VisionPro Security</see> for more information.
+</exception>
+            <exception cref="T:Cognex.VisionPro.EdgeInspect.CogOperatorFindNotRunException">
+The
+<see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.FindResults" />
+property is null or empty; the
+<see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.Find" />
+method has not been called, it was called and no paths were located,
+or the pattern has since become unfound.
+</exception>
+            <exception cref="T:Cognex.VisionPro.Exceptions.CogOperatorNoTrainImageException">
+The
+<see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.TrainImage" />
+is null.
+</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+The 
+<see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.CurrentFindResultIndex" />
+property is outside the valid index range for the current
+<see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.FindResults" />
+property. The index must be between 0 and (FindResults.Count - 1), inclusive.
+</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+The
+<see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.FixedWidth" />
+property is outside the valid value range. The value can not be 50% greater than
+or 50% less than the
+<see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectFindResult.BeadWidth" />
+property of the selected
+<see cref="T:Cognex.VisionPro.EdgeInspect.CogBeadInspectFindResult" />.
+</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+The <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.FixedWidth" /> is
+less than one pixel wide while 
+<see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.FixedWidthEnabled" /> is
+enabled.
+</exception>
+            <exception cref="T:Cognex.VisionPro.Exceptions.CogImageBadTypeException">
+The
+<see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.TrainImage" />
+you supplied is not a <see cref="T:Cognex.VisionPro.CogImage8Grey" />.
+</exception>
+            <exception cref="T:Cognex.VisionPro.Exceptions.CogImageNoPixelsException">
+The
+<see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.TrainImage" />
+has no allocated pixels.
+</exception>
+            <remarks>
+                <para>
+This method relies on the result from the
+<see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.Find" />
+method and will return an exception if called prior to at least one valid
+find result being generated.
+</para>
+                <para>
+This method utilizes the
+<see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.CurrentFindResultIndex" />
+property in order to specify which path to train.
+</para>
+                <para>
+The result is assigned to the
+<see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.TrainResult" />
+property and is not returned by this method directly. The result object may be
+used to obtain information about the trained path, such as its graphical
+representation.
+</para>
+                <para>
+A BeadInspect pattern must be trained before it can be used to check for
+defects (see the <see cref="T:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern" />
+remarks for the definition of a defect) in a runtime image. The trained pattern holds
+information needed for performing these comparisons. For example, it holds
+the expected bead widths along the found path.
+</para>
+            </remarks>
+        </member>
+        <member name="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.Find">
+            <summary>
+Finds one or more coarse bead paths.
+</summary>
+            <event cref="E:Cognex.VisionPro.ICogChangedEvent.Changed">
+Fires when this method changes the 
+<see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.Found" />
+state of the pattern.
+The following state flags may be affected:
+<list type="bullet"><item><see cref="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectPatternPattern.SfFound" /></item></list></event>
+            <exception cref="T:Cognex.VisionPro.Exceptions.CogSecurityViolationException">
+Licensing for this operation cannot be confirmed.  See
+<see cref="z:96cca39e-2aa6-4cb3-aabb-92960c4cfa63">Understanding
+VisionPro Security</see> for more information.
+</exception>
+            <exception cref="T:Cognex.VisionPro.Exceptions.CogOperatorNoTrainImageException">
+The
+<see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.TrainImage" />
+is null.
+</exception>
+            <exception cref="T:Cognex.VisionPro.Exceptions.CogImageBadTypeException">
+The
+<see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.TrainImage" />
+you supplied is not a <see cref="T:Cognex.VisionPro.CogImage8Grey" />.
+</exception>
+            <exception cref="T:Cognex.VisionPro.Exceptions.CogImageNoPixelsException">
+The
+<see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.TrainImage" />
+has no allocated pixels.
+</exception>
+            <exception cref="T:Cognex.VisionPro.Exceptions.CogSpaceTreeNameNotInTreeException">
+                <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectFindParams.StartCircle" />
+in the <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.FindParams" />
+for this pattern has a <see cref="P:Cognex.VisionPro.ICogShape.SelectedSpaceName" />
+that does not exist within the <see cref="T:Cognex.VisionPro.CogCoordinateSpaceTree" />
+of the <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.TrainImage" />.
+</exception>
+            <exception cref="T:System.ArgumentException">
+                <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectFindParams.StartCircle" />
+in the <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.FindParams" />
+for this pattern falls completely outside of the
+<see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.TrainImage" /> or a
+bead could not be located within the area specified by the start circle.
+</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+The <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectFindParams.BeadWidth" /> is
+less than one pixel wide.
+</exception>
+            <remarks>
+                <para>
+This method must be called before calling <see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.Train" />;
+the BeadInspect pattern cannot be trained prior to finding at least one coarse path.
+</para>
+                <para>
+This method utilizes the instance of <see cref="T:Cognex.VisionPro.EdgeInspect.CogBeadInspectFindParams" /> contained
+within the <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.FindParams" /> property. Results are assigned
+to the <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.FindResults" /> property and are not returned by
+this method directly.
+</para>
+            </remarks>
+        </member>
+        <member name="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.Unfind">
+            <summary>
+Unfinds this pattern. This will also untrain this pattern if it is trained.
+</summary>
+            <event cref="E:Cognex.VisionPro.ICogChangedEvent.Changed">
+Fires when this method changes the 
+<see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.Found" />
+state of the pattern.
+The following state flags may be affected:
+<list type="bullet"><item><see cref="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.SfFound" /></item><item><see cref="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.SfFindResults" /></item></list></event>
+            <remarks>
+To become "Unfound" means that the Found property will be set false and all results from the last call to
+<see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.Find" />
+will be discarded, setting <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.FindResults" />
+to null.
+</remarks>
+        </member>
+        <member name="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.Untrain">
+            <summary>
+Untrains this pattern. This will not unfind the pattern and previous find results will not be removed.
+</summary>
+            <event cref="E:Cognex.VisionPro.ICogChangedEvent.Changed">
+Fires when this method changes the 
+<see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.Trained" />
+state of the pattern.
+The following state flags may be affected:
+<list type="bullet"><item><see cref="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.SfTrained" /></item><item><see cref="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.SfTrainResult" /></item></list></event>
+        </member>
+        <member name="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.FindResultIndexUsedInTrain">
+            <summary>
+Gets the index of the <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.FindResults" />
+property that is used by the
+<see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.Train" />
+method.
+</summary>
+            <value>Default value is -1. 
+</value>
+            <remarks>
+                <para>
+The value is set to the CurrentFindResultIndex when the <see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.Train" /> method is called.
+</para>
+            </remarks>
+        </member>
+        <member name="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.CurrentFindResultIndex">
+            <summary>
+Gets or sets the index of the result within the <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.FindResults" />
+property to use when calling the
+<see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.SetCoarseContour(Cognex.VisionPro.CogGeneralContour)" />
+method.
+</summary>
+            <value>Default value is -1. This is set to 0 every time that the
+<see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.Find" />
+method is called.</value>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+The supplied value is less than 0 or greater or equal to 5.
+</exception>
+            <remarks>
+                <para>
+This property does not check that this value is within the valid range of indices for
+<see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.FindResults" />,
+that check is performed by the
+<see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.SetCoarseContour(Cognex.VisionPro.CogGeneralContour)" />
+method.
+</para>
+                <para>
+This property is independent of the
+<see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.FindResultIndexUsedInTrain" />
+property. While they refer to the same collection, the two indices are utilized in different methods.
+</para>
+            </remarks>
+        </member>
+        <member name="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.FixedWidth">
+            <summary>
+Gets or sets the fixed bead width to use when training. This value only applies if
+<see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.FixedWidthEnabled" />
+is set to "true".
+</summary>
+            <value> The fixed width. Default value is 10.0.</value>
+            <event cref="E:Cognex.VisionPro.ICogChangedEvent.Changed">
+Fires when this property changes.
+The following state flags may be affected:
+<list type="bullet"><item><see cref="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.SfFixedWidth" /></item><item><see cref="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.SfTrained" /></item><item><see cref="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.SfTrainResult" /></item><item><see cref="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.SfFindResultIndexUsedInTrain" /></item></list></event>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+The supplied value is less than or equal to zero.
+</exception>
+            <remarks>
+                <para>
+When using fixed bead width training the trained pattern will use the value specified here for every
+point along the bead path rather than the observed bead width within the training image.
+</para>
+                <para>
+The value of the fixed bead width can not be 50% larger or 50% smaller than the
+<see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectFindResult.BeadWidth" />
+property of the selected
+<see cref="T:Cognex.VisionPro.EdgeInspect.CogBeadInspectFindResult" />
+when training is executed.
+</para>
+            </remarks>
+        </member>
+        <member name="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.SmoothingFactor">
+            <summary>
+Gets or sets the number of consecutive calipers used (during training) to compute the average values of the the trained path.
+</summary>
+            <value>Default value is 3.</value>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+The supplied value is less than 1.
+</exception>
+            <remarks>
+                <para>
+Refer to the <see cref="T:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern" /> remarks for the definitions of bead paths and defects.
+</para>
+                <para>
+This is a sliding window of calipers. For a given caliper detecting a bead along the coarse path, that caliper along with a number of its neighboring calipers 
+as specified by this property are used to determine the averaged value to train such as for bead width or bead coverage (see the 
+<see cref="T:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams" />
+properties for more details as to the averaged values that are calculated and checked against). These averaged values will be used when attempting to locate 
+defects in a runtime image.
+</para>
+                <para>
+A larger smoothing factor allows for a looser tolerance for certain aspects of the bead path at runtime. A higher value for this property is advised when some 
+amount of variance for the bead along the path at runtime is expected and considered to be acceptable.
+</para>
+            </remarks>
+        </member>
+        <member name="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.CaliperSpacing">
+            <summary>
+Gets or sets the spacing between caliper center-points, along the chosen coarse bead path. 
+Since there is no empty space between neighboring calipers, this value is also the height of each caliper. 
+The height is measured perpendicular to the "width", which is measured across the bead (from one edge to the other).
+</summary>
+            <value>Default value is 3.</value>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+The supplied value is less than 1 or greater than 100.
+</exception>
+            <remarks>
+                <para>
+      This property only supports float value type precision; up to 5 decimal places (such as 0.00001) can typically be expected to be maintained. 
+      Further precision can be assigned but will be lost (truncated).
+    </para>
+                <para>
+Refer to the <see cref="T:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern" /> remarks for the definitions of bead paths and defects.
+</para>
+                <para>
+The calipers described by this property will be used at runtime for the detection of defects by sampling the bead along the trained path.
+A larger value for this property results in fewer calipers along the bead path while a smaller value will result in more calipers.
+Note that a large value means that smaller defects may be missed. A high value can be useful in avoiding false positives if 
+valid defects are expected to always cover a large section of the bead path. 
+</para>
+                <para>
+This property respects any scaling present in the 
+<see cref="P:Cognex.VisionPro.ICogShape.SelectedSpaceName" />
+of the 
+<see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.TrainImage" />.
+The value used should account for any scaling being applied. 
+</para>
+            </remarks>
+        </member>
+        <member name="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.TrainResult">
+            <summary>
+Gets the result from the last call to <see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.Train" />.
+</summary>
+            <value> An object that holds information about the trained pattern. Default value is null.</value>
+            <remarks>
+This property is set to null when the pattern becomes untrained.
+</remarks>
+        </member>
+        <member name="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.FindResults">
+            <summary>
+Gets the results from the last call to <see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.Find" />.
+</summary>
+            <value> A collection of coarse paths. Default value is null.</value>
+            <remarks>
+This property is set to null when the pattern becomes unfound.
+</remarks>
+        </member>
+        <member name="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.FixedWidthEnabled">
+            <summary>
+Gets or Sets whether training uses a fixed bead width. The value used when training is defined by the
+<see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.FixedWidth" />
+property.
+</summary>
+            <value> "True" if pattern will use a fixed bead width.  "False" otherwise. Default value is "False".</value>
+            <event cref="E:Cognex.VisionPro.ICogChangedEvent.Changed">
+Fires when this property changes.
+The following state flags may be affected:
+<list type="bullet"><item><see cref="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.SfFixedWidthEnabled" /></item><item><see cref="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.SfTrained" /></item><item><see cref="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.SfTrainResult" /></item><item><see cref="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.SfFindResultIndexUsedInTrain" /></item></list></event>
+        </member>
+        <member name="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.Trained">
+            <summary>
+Gets whether this pattern is currently trained.
+</summary>
+            <value> "True" if the pattern is trained.  "False" otherwise. Default value is "False".</value>
+        </member>
+        <member name="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.Found">
+            <summary>
+Gets whether one or more coarse paths have been found.
+</summary>
+            <value> "True" if one or more coarse paths have been found. "False" otherwise. Default value is "False".</value>
+        </member>
+        <member name="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.FindParams">
+            <summary>
+Gets or sets the parameters required to find one or more coarse paths that can be used for training this pattern.
+</summary>
+            <value> The find parameters. Default value is a default constructed instance of 
+<see cref="T:Cognex.VisionPro.EdgeInspect.CogBeadInspectFindParams" />. Must not be null.
+</value>
+            <event cref="E:Cognex.VisionPro.ICogChangedEvent.Changed">
+Fires when this property changes.
+The following state flags may be affected:
+<list type="bullet"><item><see cref="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.SfFindParams" /></item></list></event>
+            <exception cref="T:System.ArgumentNullException">
+Null was assigned to this property.
+</exception>
+            <remarks>
+                <para>
+      If you change this value on a trained pattern object, the pattern will 
+      become untrained and will also become unfound (Found property is marked false 
+      and all existing Find results are discarded).
+    </para>
+            </remarks>
+        </member>
+        <member name="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.TrainImage">
+            <summary>
+Gets or sets the image that will be used to find coarse paths and train this pattern.
+</summary>
+            <value> The train image. Default value is null. </value>
+            <event cref="E:Cognex.VisionPro.ICogChangedEvent.Changed">
+Fires when this property changes.
+The following state flags may be affected:
+<list type="bullet"><item><see cref="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.SfTrainImage" /></item></list></event>
+            <remarks>
+                <para>
+      If you change this value on a trained pattern object, the pattern will 
+      become untrained and will also become unfound (Found property is marked false 
+      and all existing Find results are discarded).
+    </para>
+            </remarks>
+        </member>
+        <member name="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.Finalize">
+            <summary>
+Releases all unmanaged resources used by this CogBeadInspectPattern object.
+</summary>
+        </member>
+        <member name="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.Dispose">
+            <summary>
+Releases all resources used by this CogBeadInspectPattern object.
+</summary>
+        </member>
+        <member name="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.#ctor(Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern)">
+            <summary>
+Constructs a deep copy of the supplied CogBeadInspectPattern object.
+</summary>
+            <param name="other">
+The CogBeadInspectPattern to be copied. Must not be null.
+</param>
+            <exception cref="T:System.ArgumentNullException">
+                <paramref name="other" /> is null.
+</exception>
+            <exception cref="T:System.ObjectDisposedException">
+                <paramref name="other" /> is disposed.
+</exception>
+        </member>
+        <member name="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.#ctor">
+            <summary>
+Constructs a default CogBeadInspectPattern object. This new pattern 
+contains a default set of find params. You must train this object 
+before you can use it to detect defects.
+</summary>
+        </member>
+        <member name="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.SfFixedWidth">
+            <summary>
+This bit will be set in the EventArgs of a Changed event every time
+the value returned by FixedWidth may have changed.
+</summary>
+        </member>
+        <member name="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.SfFixedWidthEnabled">
+            <summary>
+This bit will be set in the EventArgs of a Changed event every time
+the value returned by FixedWidthEnabled may have changed.
+</summary>
+        </member>
+        <member name="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.SfFindResultIndexUsedInTrain">
+            <summary>
+This bit will be set in the EventArgs of a Changed event every time
+the value returned by FindResultIndexUsedInTrain may have changed.
+</summary>
+        </member>
+        <member name="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.SfCurrentFindResultIndex">
+            <summary>
+This bit will be set in the EventArgs of a Changed event every time
+the value returned by CurrentFindResultIndex may have changed.
+</summary>
+        </member>
+        <member name="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.SfSmoothingFactor">
+            <summary>
+This bit will be set in the EventArgs of a Changed event every time
+the value returned by SmoothingFactor may have changed.
+</summary>
+        </member>
+        <member name="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.SfCaliperSpacing">
+            <summary>
+This bit will be set in the EventArgs of a Changed event every time
+the value returned by CaliperSpacing may have changed.
+</summary>
+        </member>
+        <member name="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.SfTrainResult">
+            <summary>
+This bit will be set in the EventArgs of a Changed event every time
+the value returned by TrainResult may have changed.
+</summary>
+        </member>
+        <member name="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.SfFindResults">
+            <summary>
+This bit will be set in the EventArgs of a Changed event every time
+the value returned by FindResults may have changed.
+</summary>
+        </member>
+        <member name="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.SfTrained">
+            <summary>
+This bit will be set in the EventArgs of a Changed event every time
+the value returned by Trained may have changed.
+</summary>
+        </member>
+        <member name="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.SfFound">
+            <summary>
+This bit will be set in the EventArgs of a Changed event every time
+the value returned by Found may have changed.
+</summary>
+        </member>
+        <member name="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.SfFindParams">
+            <summary>
+This bit will be set in the EventArgs of a Changed event every time
+the value returned by FindParams may have changed.
+</summary>
+        </member>
+        <member name="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.SfTrainImage">
+            <summary>
+This bit will be set in the EventArgs of a Changed event every time
+the value returned by TrainImage may have changed.
+</summary>
+        </member>
+        <member name="T:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern">
+            <summary>
+Class that represents a BeadInspect pattern. You can use the methods of
+this class to find coarse path candidates for training, to train a new path, and to
+detect defects in a runtime image.
+</summary>
+            <remarks>
+                <para>
+A BeadInspect pattern must be found (using the
+<see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.Find" /> method)
+before it can be trained, and must be trained (using the
+<see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.Train" /> method)
+before it can be used to detect defects in a runtime image.
+</para>
+                <para>
+The pattern contains parameters that affect the finding process and
+and also parameters that affect the training process. The parameters
+that affect finding are all contained in the
+<see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.FindParams" />
+property while the training parameters are contained directly in the pattern.
+If you change any of these parameters on a trained pattern object,
+the pattern will automatically untrain itself. This ensures that the features 
+of a trained pattern are in sync with the parameters that created them.
+</para>
+                <para>
+Once trained, this pattern encapsulates the exact shape and position of
+the path that is expected at runtime. Any differences between the path
+trained here and the path inspected in the runtime image will be flagged as
+defects when the
+<see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.Execute(Cognex.VisionPro.ICogVisionData,Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams)" />
+method of the pattern is called. Note that execute expects the runtime path to be at
+exactly the trained position, it does not "search" for the path within a region.
+</para>
+                <para>
+The trained pattern will store the bead widths along the bead path when training.
+By default these bead widths are found from the observed bead path of the training
+image. If you wish to instead train using a bead path width which remains constant
+along the entire path you may enable fixed width training by setting the
+<see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.FixedWidthEnabled" />
+property to true. You may specify the expected bead width using the 
+<see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.FixedWidth" />
+propery.
+</para>
+                <para>
+      A "bead" can be visualized as a thick line; an elongated region of near-uniform
+      intensity. The center line of this bead is known as the "bead path" and the
+      perpendicular distance between the bead edges is known as the "bead width".
+    </para>
+                <para>
+      A "bead path" is a sequence of adjacent points within an image where a bead 
+      can successfully be located (within a tolerance for small gaps or variances 
+      such as the size of the bead). A path will often form a closed loop, but this 
+      is not a requirement. A bead path has a start and end point as well as a direction
+      that goes from the start point to the end point along the path.
+    </para>
+                <para>
+      A "coarse path" is a bead path that has been generated by a find operation.
+      If desired, you can edit the coarse path (to eliminate any blemishes) and then
+      refine it using the <see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.Train" />
+      method. The resulting "trained path" is smoother and more accurate than the coarse path.
+      It also contains information about the width of the bead along this smoothed path.
+      The trained path is read-only and cannot be edited. It can be used at run-time to detect defects.
+    </para>
+            </remarks>
+        </member>
+        <member name="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectResult.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+Populates the provided SerializationInfo with the data needed to
+serialize the object.
+</summary>
+            <param name="info">The SerializationInfo to which serialization
+data must be added.</param>
+            <param name="ctxt">The StreamingContext that indicates the intent
+of the current serialization operation.</param>
+        </member>
+        <member name="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectResult.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+Serialization constructor for CogBeadInspectDefect object.
+</summary>
+            <param name="info">
+The standard SerializationInfo argument.
+</param>
+            <param name="ctxt">
+The standard StreamingContext argument.
+</param>
+        </member>
+        <member name="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectResult.GetCaliperRightEdge(System.Int32,System.Boolean@,System.Boolean@,System.Double@,System.Double@,System.Double@)">
+            <summary>
+Provides a description of the edge found on the right side of the bead
+path by the caliper at the given index.
+</summary>
+            <param name="index">
+The index of the caliper along the bead path.
+</param>
+            <param name="found">
+This Boolean output will be false if the caliper could not find a right
+edge and was not configured to create a right fill edge.
+It will be true if an edge was detected, or was created as a fill edge.
+</param>
+            <param name="filled">
+This Boolean output will be true if the right edge was artificially
+created as a fill edge. This can only happen if:
+<list type="bullet"><item> this caliper cannot find a right edge in the image, and </item><item> this caliper is configured to create a right fill edge (by
+         setting a true value for its index in the
+         <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.RightFillList" />).
+  </item></list></param>
+            <param name="edgePosX">
+This output is the X coordinate of the edge, if found.  Otherwise, zero.
+A non-zero edge position always lies along the centerline of the caliper.
+</param>
+            <param name="edgePosY">
+This output is the Y coordinate of the edge, if found.  Otherwise, zero.
+A non-zero edge position always lies along the centerline of the caliper.
+</param>
+            <param name="contrast">
+This output is the contrast of the edge, if found.  Otherwise, zero.
+</param>
+            <exception cref="T:System.IndexOutOfRangeException">
+The given <paramref name="index" /> is less than zero.  Or it is equal
+to, or greater than,
+<see cref="P:Cognex.VisionPro.CogBeadInspectResult.NumCalipers" /></exception>
+            <remarks>
+                <para>
+      If an edge of the bead is missing, 
+      <see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectResult.GetCaliperLeftEdge(System.Int32,System.Boolean@,System.Boolean@,System.Double@,System.Double@,System.Double@)" /> and/or
+      <see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectResult.GetCaliperRightEdge(System.Int32,System.Boolean@,System.Boolean@,System.Double@,System.Double@,System.Double@)" /> 
+      will report as outputs:
+    <list type="bullet"><item>
+        Position as zero for the missing edge.
+      </item><item>
+        Contrast as zero for the missing edge.
+      </item></list>
+      If an edge of the bead is missing, but is filled at run-time,
+      <see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectResult.GetCaliperLeftEdge(System.Int32,System.Boolean@,System.Boolean@,System.Double@,System.Double@,System.Double@)" /> and/or
+      <see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectResult.GetCaliperRightEdge(System.Int32,System.Boolean@,System.Boolean@,System.Double@,System.Double@,System.Double@)" /> 
+      will report as outputs:
+      <list type="bullet"><item>
+          Position of the filled edge: This position is interpolated from the edges found by nearby calipers.
+        </item><item>
+          Contrast as zero for the filled edge.
+        </item></list></para>
+            </remarks>
+        </member>
+        <member name="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectResult.GetCaliperLeftEdge(System.Int32,System.Boolean@,System.Boolean@,System.Double@,System.Double@,System.Double@)">
+            <summary>
+Provides a description of the edge found on the left side of the bead
+path by the caliper at the given index.
+</summary>
+            <param name="index">
+The index of the caliper along the bead path.
+</param>
+            <param name="found">
+This Boolean output will be false if the caliper could not find a left
+edge and was not configured to create a left fill edge.
+It will be true if an edge was detected, or was created as a fill edge.
+</param>
+            <param name="filled">
+This Boolean output will be true if the left edge was artificially
+created as a fill edge. This can only happen if:
+<list type="bullet"><item> this caliper cannot find a left edge in the image, and </item><item> this caliper is configured to create a left fill edge (by
+         setting a true value for its index in the
+         <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.LeftFillList" />).
+  </item></list></param>
+            <param name="edgePosX">
+This output is the X coordinate of the edge, if found.  Otherwise, zero.
+A non-zero edge position always lies along the centerline of the caliper.
+</param>
+            <param name="edgePosY">
+This output is the Y coordinate of the edge, if found.  Otherwise, zero.
+A non-zero edge position always lies along the centerline of the caliper.
+</param>
+            <param name="contrast">
+This output is the contrast of the edge, if found.  Otherwise, zero.
+</param>
+            <exception cref="T:System.IndexOutOfRangeException">
+The given <paramref name="index" /> is less than zero.  Or it is equal
+to, or greater than,
+<see cref="P:Cognex.VisionPro.CogBeadInspectResult.NumCalipers" /></exception>
+            <remarks>
+                <para>
+      The left and right edges of the bead are defined relative to the
+      direction of the bead path.  If you imagine that you are travelling
+      along the path, from its start to its end, the left edge will be on
+      your left-hand side.  The right edge will be on your right-hand side.
+    </para>
+                <para>
+      If an edge of the bead is missing, 
+      <see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectResult.GetCaliperLeftEdge(System.Int32,System.Boolean@,System.Boolean@,System.Double@,System.Double@,System.Double@)" /> and/or
+      <see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectResult.GetCaliperRightEdge(System.Int32,System.Boolean@,System.Boolean@,System.Double@,System.Double@,System.Double@)" /> 
+      will report as outputs:
+    <list type="bullet"><item>
+        Position as zero for the missing edge.
+      </item><item>
+        Contrast as zero for the missing edge.
+      </item></list>
+      If an edge of the bead is missing, but is filled at run-time,
+      <see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectResult.GetCaliperLeftEdge(System.Int32,System.Boolean@,System.Boolean@,System.Double@,System.Double@,System.Double@)" /> and/or
+      <see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectResult.GetCaliperRightEdge(System.Int32,System.Boolean@,System.Boolean@,System.Double@,System.Double@,System.Double@)" /> 
+      will report as outputs:
+      <list type="bullet"><item>
+          Position of the filled edge: This position is interpolated from the edges found by nearby calipers.
+        </item><item>
+          Contrast as zero for the filled edge.
+        </item></list></para>
+            </remarks>
+        </member>
+        <member name="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectResult.GetCaliperDefectClass(System.Int32)">
+            <summary>
+Returns a description of the defect(s) detected by the caliper at the
+given index.  The description is returned as a bitwise OR of the flags
+defined by the <see cref="T:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefectTypeConstants" />
+enumeration.
+</summary>
+            <param name="index">
+The index of the caliper along the bead path.
+</param>
+            <exception cref="T:System.IndexOutOfRangeException">
+The given <paramref name="index" /> is less than zero.  Or it is equal
+to, or greater than,
+<see cref="P:Cognex.VisionPro.CogBeadInspectResult.NumCalipers" /></exception>
+            <returns>
+A bitwise OR of the flags defined by the
+<see cref="T:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefectTypeConstants" /> enumeration.  If no defect was detected the return value will be
+<see cref="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefectTypeConstants.None" /></returns>
+        </member>
+        <member name="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectResult.GetCaliperRightStep(System.Int32)">
+            <summary>
+Returns the step value measured along the right edge of the bead
+by the caliper at the given index.
+</summary>
+            <param name="index">
+The index of the caliper along the bead path.
+</param>
+            <exception cref="T:System.IndexOutOfRangeException">
+The given <paramref name="index" /> is less than zero.  Or it is equal
+to, or greater than,
+<see cref="P:Cognex.VisionPro.CogBeadInspectResult.NumCalipers" /></exception>
+            <returns>
+The right-hand step value measured by the indexed caliper.
+</returns>
+            <remarks>
+                <para>
+      A "step" measures the largest relative deviation in the edge of the
+      bead path when moving from a caliper to either of its neighbors.  The
+      deviation is measured sideways -- perpendicular to the direction of the
+      bead path -- and is expressed as a fraction of the average bead width
+      trained at that caliper's location.  For example, a step of 0.1 indicates
+      that the edge of the bead path moves sideways by 10% of the trained
+      width at that location.  This measurement helps to quantify the 
+      smoothness of the bead edge.
+    </para>
+                <para>
+      The left and right edges of the bead are defined relative to the
+      direction of the bead path.  If you imagine that you are travelling
+      along the path, from its start to its end, the left edge will be on
+      your left-hand side.  The right edge will be on your right-hand side.
+    </para>
+                <para>
+      If the user disables <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.StepThresholdEnabled" />,
+    the bead step will not be measured at run-time and <see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectResult.GetCaliperLeftStep(System.Int32)" />, 
+	  <see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectResult.GetCaliperRightStep(System.Int32)" />,
+    <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefect.LeftStepMax" /> and <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefect.RightStepMax" /> will all be reported
+    as zero.
+  </para>
+                <para>
+      If an edge of the bead is missing, or missing and then filled, <see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectResult.GetCaliperLeftStep(System.Int32)" /> and/or
+      <see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectResult.GetCaliperRightStep(System.Int32)" />
+      will be reported as zero.
+    </para>
+            </remarks>
+        </member>
+        <member name="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectResult.GetCaliperLeftStep(System.Int32)">
+            <summary>
+Returns the step value measured along the left edge of the bead
+by the caliper at the given index.
+</summary>
+            <param name="index">
+The index of the caliper along the bead path.
+</param>
+            <exception cref="T:System.IndexOutOfRangeException">
+The given <paramref name="index" /> is less than zero.  Or it is equal
+to, or greater than,
+<see cref="P:Cognex.VisionPro.CogBeadInspectResult.NumCalipers" /></exception>
+            <returns>
+The left-hand step value measured by the indexed caliper.
+</returns>
+            <remarks>
+                <para>
+      A "step" measures the largest relative deviation in the edge of the
+      bead path when moving from a caliper to either of its neighbors.  The
+      deviation is measured sideways -- perpendicular to the direction of the
+      bead path -- and is expressed as a fraction of the average bead width
+      trained at that caliper's location.  For example, a step of 0.1 indicates
+      that the edge of the bead path moves sideways by 10% of the trained
+      width at that location.  This measurement helps to quantify the 
+      smoothness of the bead edge.
+    </para>
+                <para>
+      The left and right edges of the bead are defined relative to the
+      direction of the bead path.  If you imagine that you are travelling
+      along the path, from its start to its end, the left edge will be on
+      your left-hand side.  The right edge will be on your right-hand side.
+    </para>
+                <para>
+      If the user disables <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.StepThresholdEnabled" />,
+    the bead step will not be measured at run-time and <see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectResult.GetCaliperLeftStep(System.Int32)" />, 
+	  <see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectResult.GetCaliperRightStep(System.Int32)" />,
+    <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefect.LeftStepMax" /> and <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefect.RightStepMax" /> will all be reported
+    as zero.
+  </para>
+                <para>
+      If an edge of the bead is missing, or missing and then filled, <see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectResult.GetCaliperLeftStep(System.Int32)" /> and/or
+      <see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectResult.GetCaliperRightStep(System.Int32)" />
+      will be reported as zero.
+    </para>
+            </remarks>
+        </member>
+        <member name="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectResult.GetCaliperBeadCoverage(System.Int32)">
+            <summary>
+Returns the coverage ratio measured by the caliper at the given index.
+</summary>
+            <param name="index">
+The index of the caliper along the bead path.
+</param>
+            <exception cref="T:System.IndexOutOfRangeException">
+The given <paramref name="index" /> is less than zero.  Or it is equal
+to, or greater than,
+<see cref="P:Cognex.VisionPro.CogBeadInspectResult.NumCalipers" /></exception>
+            <returns>
+The coverage ratio measured by the indexed caliper.
+</returns>
+            <remarks>
+                <para>
+      The bead coverage is a ratio of the number of bead pixels found at runtime to the 
+      average number of bead pixels found at train time. A "bead pixel" is any pixel 
+      between the two bead edges that has the same polarity (dark or light) as the bead itself. 
+      Often, all of the pixels between the two bead edges are bead pixels, 
+      but there can sometimes be holes in the bead.
+    </para>
+                <para>
+      The average number of bead pixels is computed at train time for each caliper. 
+      This value is computed by averaging the number of bead pixels from neighboring calipers. 
+      The number of calipers to average is specified by the
+      <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.SmoothingFactor" /> train property.
+    </para>
+                <para>
+      If the user disables both <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.CoverageMinEnabled" /> and <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.CoverageMaxEnabled" />,
+	  the bead coverage will not be measured at run-time and <see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectResult.GetCaliperBeadCoverage(System.Int32)" />,
+    <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefect.CoverageMin" />, 
+    <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefect.CoverageMax" />, and
+    <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefect.CoverageAvg" />
+    will all be reported as zero.
+  </para>
+                <para>
+      Even if an edge of the bead is missing, or missing and then filled, <see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectResult.GetCaliperBeadCoverage(System.Int32)" /> 
+      will be calculated and reported conventionally.
+    </para>
+            </remarks>
+        </member>
+        <member name="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectResult.GetCaliperBeadWidth(System.Int32)">
+            <summary>
+Returns the width ratio measured by the caliper at the given index.
+The width ratio is computed by dividing the width measured at runtime
+by the width measured at train-time.
+</summary>
+            <param name="index">
+The index of the caliper along the bead path.
+</param>
+            <exception cref="T:System.IndexOutOfRangeException">
+The given <paramref name="index" /> is less than zero.  Or it is equal
+to, or greater than,
+<see cref="P:Cognex.VisionPro.CogBeadInspectResult.NumCalipers" /></exception>
+            <remarks>
+                <para>
+      If the user disables both <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.WidthMinEnabled" /> and <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.WidthMaxEnabled" />,
+	  the bead width will not be measured at run-time and <see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectResult.GetCaliperBeadWidth(System.Int32)" />,
+    <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefect.WidthMin" />,
+    <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefect.WidthMax" />, and
+    <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefect.WidthAvg" />
+    will all be reported as zero.
+  </para>
+                <para>
+      If either edge of the bead is missing and not filled, <see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectResult.GetCaliperBeadWidth(System.Int32)" /> will be
+      reported as zero for the calipers with a missing edge. If the missing edge is filled at run-time,
+      the width is calculated and reported conventionally.
+    </para>
+            </remarks>
+            <returns>
+The width ratio measured by the indexed caliper.
+</returns>
+        </member>
+        <member name="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectResult.NumCalipers">
+            <summary>
+Gets the total number of calipers that lie along the found bead path.
+</summary>
+            <value> 
+The number of calipers used during inspection.
+</value>
+        </member>
+        <member name="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectResult.Contour">
+            <summary>
+Returns a <see cref="T:Cognex.VisionPro.CogGeneralContour" />
+that represents the found path.
+</summary>
+        </member>
+        <member name="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectResult.Defects">
+            <summary>
+Gets the set of observed defects in the runtime image.
+</summary>
+            <value> A collection of defects. Default value is null.</value>
+        </member>
+        <member name="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectResult.Finalize">
+            <summary>
+Releases all unmanaged resources used by this CogBeadInspectResult object.
+</summary>
+        </member>
+        <member name="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectResult.Dispose">
+            <summary>
+Releases all resources used by this CogBeadInspectResult object.
+</summary>
+        </member>
+        <member name="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectResult.#ctor(Cognex.VisionPro.EdgeInspect.CogBeadInspectResult)">
+            <summary>
+Constructs a deep copy of the supplied CogBeadInspectResult object.
+</summary>
+            <param name="other">
+The CogBeadInspectResult to be copied. Must not be null.
+</param>
+            <exception cref="T:System.ArgumentNullException">
+                <paramref name="other" /> is null.
+</exception>
+            <exception cref="T:System.ObjectDisposedException">
+                <paramref name="other" /> is disposed.
+</exception>
+        </member>
+        <member name="T:Cognex.VisionPro.EdgeInspect.CogBeadInspectResult">
+            <summary>
+Class that holds analysis of the runtime image, generated by the
+<see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.Execute(Cognex.VisionPro.ICogVisionData,Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams)" />
+method.
+</summary>
+        </member>
+        <member name="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefects.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+Serialization constructor for CogBeadInspectDefects object.
+</summary>
+            <param name="info">
+The standard SerializationInfo argument.
+</param>
+            <param name="ctxt">
+The standard StreamingContext argument.
+</param>
+        </member>
+        <member name="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefects.#ctor(Cognex.VisionPro.EdgeInspect.CogBeadInspectDefects)">
+            <summary>
+Constructs a deep copy of the supplied CogBeadInspectDefects object.
+</summary>
+            <param name="other">
+The CogBeadInspectDefects to be copied. Must not be null.
+</param>
+            <exception cref="T:System.ArgumentNullException">
+                <paramref name="other" /> is null.
+</exception>
+            <exception cref="T:System.ObjectDisposedException">
+                <paramref name="other" /> is disposed.
+</exception>
+        </member>
+        <member name="T:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefects">
+            <summary>
+Class that holds a collection of <see cref="T:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefect" />.
+An instance of this class is returned by the <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectResult.Defects" /> property.
+</summary>
+            <remarks>
+Individual results may be accessed through indexing, See below for an example in C#.
+</remarks>
+            <example>
+                <code>
+CogBeadInspectDefect firstDefect = myDefects[0];
+CogBeadInspectDefect secondDefect = myDefects[1];
+</code>
+            </example>
+        </member>
+        <member name="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefect.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+Populates the provided SerializationInfo with the data needed to
+serialize the object.
+</summary>
+            <param name="info">The SerializationInfo to which serialization
+data must be added.</param>
+            <param name="ctxt">The StreamingContext that indicates the intent
+of the current serialization operation.</param>
+        </member>
+        <member name="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefect.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+Serialization constructor for CogBeadInspectDefect object.
+</summary>
+            <param name="info">
+The standard SerializationInfo argument.
+</param>
+            <param name="ctxt">
+The standard StreamingContext argument.
+</param>
+        </member>
+        <member name="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefect.RightStepMax">
+            <summary>
+Get the maximum step value measured by the calipers of this defect
+along the right edge of the bead.  This measurement can help you to
+identify sharp fluctuations in the position of the edge.
+</summary>
+            <value> The largest step value along the right edge of the bead.</value>
+            <remarks>
+                <para>
+      A "step" measures the largest relative deviation in the edge of the
+      bead path when moving from a caliper to either of its neighbors.  The
+      deviation is measured sideways -- perpendicular to the direction of the
+      bead path -- and is expressed as a fraction of the average bead width
+      trained at that caliper's location.  For example, a step of 0.1 indicates
+      that the edge of the bead path moves sideways by 10% of the trained
+      width at that location.  This measurement helps to quantify the 
+      smoothness of the bead edge.
+    </para>
+                <para>
+      The left and right edges of the bead are defined relative to the
+      direction of the bead path.  If you imagine that you are travelling
+      along the path, from its start to its end, the left edge will be on
+      your left-hand side.  The right edge will be on your right-hand side.
+    </para>
+                <para>
+      If the user disables <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.StepThresholdEnabled" />,
+    the bead step will not be measured at run-time and <see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectResult.GetCaliperLeftStep(System.Int32)" />, 
+	  <see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectResult.GetCaliperRightStep(System.Int32)" />,
+    <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefect.LeftStepMax" /> and <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefect.RightStepMax" /> will all be reported
+    as zero.
+  </para>
+            </remarks>
+        </member>
+        <member name="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefect.LeftStepMax">
+            <summary>
+Get the maximum step value measured by the calipers of this defect
+along the left edge of the bead.  This measurement can help you to
+identify sharp fluctuations in the position of the edge.
+</summary>
+            <value> The largest step value along the left edge of the bead.</value>
+            <remarks>
+                <para>
+      A "step" measures the largest relative deviation in the edge of the
+      bead path when moving from a caliper to either of its neighbors.  The
+      deviation is measured sideways -- perpendicular to the direction of the
+      bead path -- and is expressed as a fraction of the average bead width
+      trained at that caliper's location.  For example, a step of 0.1 indicates
+      that the edge of the bead path moves sideways by 10% of the trained
+      width at that location.  This measurement helps to quantify the 
+      smoothness of the bead edge.
+    </para>
+                <para>
+      The left and right edges of the bead are defined relative to the
+      direction of the bead path.  If you imagine that you are travelling
+      along the path, from its start to its end, the left edge will be on
+      your left-hand side.  The right edge will be on your right-hand side.
+    </para>
+                <para>
+      If the user disables <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.StepThresholdEnabled" />,
+    the bead step will not be measured at run-time and <see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectResult.GetCaliperLeftStep(System.Int32)" />, 
+	  <see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectResult.GetCaliperRightStep(System.Int32)" />,
+    <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefect.LeftStepMax" /> and <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefect.RightStepMax" /> will all be reported
+    as zero.
+  </para>
+            </remarks>
+        </member>
+        <member name="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefect.CoverageAvg">
+            <summary>
+Get the average coverage ratio measured by the calipers of this defect.
+</summary>
+            <value> The average coverage ratio for all of the calipers
+in this defect.</value>
+            <remarks>
+                <para>
+      The bead coverage is a ratio of the number of bead pixels found at runtime to the 
+      average number of bead pixels found at train time. A "bead pixel" is any pixel 
+      between the two bead edges that has the same polarity (dark or light) as the bead itself. 
+      Often, all of the pixels between the two bead edges are bead pixels, 
+      but there can sometimes be holes in the bead.
+    </para>
+                <para>
+      The average number of bead pixels is computed at train time for each caliper. 
+      This value is computed by averaging the number of bead pixels from neighboring calipers. 
+      The number of calipers to average is specified by the
+      <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.SmoothingFactor" /> train property.
+    </para>
+                <para>
+      If the user disables both <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.CoverageMinEnabled" /> and <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.CoverageMaxEnabled" />,
+	  the bead coverage will not be measured at run-time and <see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectResult.GetCaliperBeadCoverage(System.Int32)" />,
+    <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefect.CoverageMin" />, 
+    <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefect.CoverageMax" />, and
+    <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefect.CoverageAvg" />
+    will all be reported as zero.
+  </para>
+            </remarks>
+        </member>
+        <member name="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefect.CoverageMax">
+            <summary>
+Get the maximum coverage ratio measured by the calipers of this defect.
+</summary>
+            <value> The largest measured coverage ratio.  A value of 1.5
+implies that every caliper in the defect has a runtime coverage less
+than or equal to 150% of the coverage measured at train-time.</value>
+            <remarks>
+                <para>
+      The bead coverage is a ratio of the number of bead pixels found at runtime to the 
+      average number of bead pixels found at train time. A "bead pixel" is any pixel 
+      between the two bead edges that has the same polarity (dark or light) as the bead itself. 
+      Often, all of the pixels between the two bead edges are bead pixels, 
+      but there can sometimes be holes in the bead.
+    </para>
+                <para>
+      The average number of bead pixels is computed at train time for each caliper. 
+      This value is computed by averaging the number of bead pixels from neighboring calipers. 
+      The number of calipers to average is specified by the
+      <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.SmoothingFactor" /> train property.
+    </para>
+                <para>
+      If the user disables both <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.CoverageMinEnabled" /> and <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.CoverageMaxEnabled" />,
+	  the bead coverage will not be measured at run-time and <see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectResult.GetCaliperBeadCoverage(System.Int32)" />,
+    <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefect.CoverageMin" />, 
+    <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefect.CoverageMax" />, and
+    <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefect.CoverageAvg" />
+    will all be reported as zero.
+  </para>
+            </remarks>
+        </member>
+        <member name="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefect.CoverageMin">
+            <summary>
+Get the minimum coverage ratio measured by the calipers of this defect.
+</summary>
+            <value> The smallest measured coverage ratio.  A value of 0.8
+implies that every caliper in the defect has a runtime coverage greater
+than or equal to 80% of the coverage measured at train-time.</value>
+            <remarks>
+                <para>
+      The bead coverage is a ratio of the number of bead pixels found at runtime to the 
+      average number of bead pixels found at train time. A "bead pixel" is any pixel 
+      between the two bead edges that has the same polarity (dark or light) as the bead itself. 
+      Often, all of the pixels between the two bead edges are bead pixels, 
+      but there can sometimes be holes in the bead.
+    </para>
+                <para>
+      The average number of bead pixels is computed at train time for each caliper. 
+      This value is computed by averaging the number of bead pixels from neighboring calipers. 
+      The number of calipers to average is specified by the
+      <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.SmoothingFactor" /> train property.
+    </para>
+                <para>
+      If the user disables both <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.CoverageMinEnabled" /> and <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.CoverageMaxEnabled" />,
+	  the bead coverage will not be measured at run-time and <see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectResult.GetCaliperBeadCoverage(System.Int32)" />,
+    <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefect.CoverageMin" />, 
+    <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefect.CoverageMax" />, and
+    <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefect.CoverageAvg" />
+    will all be reported as zero.
+  </para>
+            </remarks>
+        </member>
+        <member name="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefect.WidthAvg">
+            <summary>
+Get the average width ratio measured by the calipers of this defect.
+For each caliper the width ratio is computed by dividing the width
+measured at runtime by the width measured at train-time.
+</summary>
+            <remarks>
+                <para>
+      If the user disables both <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.WidthMinEnabled" /> and <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.WidthMaxEnabled" />,
+	  the bead width will not be measured at run-time and <see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectResult.GetCaliperBeadWidth(System.Int32)" />,
+    <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefect.WidthMin" />,
+    <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefect.WidthMax" />, and
+    <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefect.WidthAvg" />
+    will all be reported as zero.
+  </para>
+            </remarks>
+            <value> The average bead width ratio for all of the calipers
+in this defect.</value>
+        </member>
+        <member name="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefect.WidthMax">
+            <summary>
+Get the maximum width ratio measured by the calipers of this defect.
+For each caliper the width ratio is computed by dividing the width
+measured at runtime by the width measured at train-time.
+</summary>
+            <remarks>
+                <para>
+      If the user disables both <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.WidthMinEnabled" /> and <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.WidthMaxEnabled" />,
+	  the bead width will not be measured at run-time and <see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectResult.GetCaliperBeadWidth(System.Int32)" />,
+    <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefect.WidthMin" />,
+    <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefect.WidthMax" />, and
+    <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefect.WidthAvg" />
+    will all be reported as zero.
+  </para>
+            </remarks>
+            <value> The largest measured bead width ratio.  A value of 1.5
+implies that every caliper in the defect has a runtime width less
+than or equal to 150% of the width measured at train-time.</value>
+        </member>
+        <member name="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefect.WidthMin">
+            <summary>
+Get the minimum width ratio measured by the calipers of this defect.
+For each caliper the width ratio is computed by dividing the width
+measured at runtime by the width measured at train-time.
+</summary>
+            <remarks>
+                <para>
+      If the user disables both <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.WidthMinEnabled" /> and <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.WidthMaxEnabled" />,
+	  the bead width will not be measured at run-time and <see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectResult.GetCaliperBeadWidth(System.Int32)" />,
+    <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefect.WidthMin" />,
+    <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefect.WidthMax" />, and
+    <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefect.WidthAvg" />
+    will all be reported as zero.
+  </para>
+            </remarks>
+            <value> The smallest measured bead width ratio.  A value of 0.8
+implies that every caliper in the defect has a runtime width greater
+than or equal to 80% of the width measured at train-time.</value>
+        </member>
+        <member name="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefect.EndCaliperIndex">
+            <summary>
+Get the index of the last caliper that comprises this defect.
+</summary>
+            <value> The index of the last caliper in this defect.</value>
+            <remarks>
+If you want to view result values for an
+individual caliper, please see the methods of the 
+<see cref="T:Cognex.VisionPro.EdgeInspect.CogBeadInspectResult" /> class.
+</remarks>
+        </member>
+        <member name="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefect.StartCaliperIndex">
+            <summary>
+Get the index of the first caliper that comprises this defect.
+</summary>
+            <value> The index of the first caliper in this defect.</value>
+            <remarks>
+If you want to view result values for an
+individual caliper, please see the methods of the 
+<see cref="T:Cognex.VisionPro.EdgeInspect.CogBeadInspectResult" /> class.
+</remarks>
+        </member>
+        <member name="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefect.DefectClass">
+            <summary>
+Gets the categories that describe the defect, specified as bitwise ORed flags defined by the <see cref="T:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefectTypeConstants" /> enumeration.
+</summary>
+        </member>
+        <member name="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefect.Bounds">
+            <summary>
+Gets the bounding box of the defect.  The bounding box encloses the
+segment of the bead path where the defect is present, and all of the
+calipers that compise that defect.
+This box is specified in units defined by the image's
+<see cref="P:Cognex.VisionPro.ICogImage.SelectedSpaceName" />.
+</summary>
+        </member>
+        <member name="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefect.Area">
+            <summary>
+Gets the area of the bead path where the defect was detected. The area is defined by summing the bead widths within the defect.
+This area is specified in units defined by the image's
+<see cref="P:Cognex.VisionPro.ICogImage.SelectedSpaceName" />.
+</summary>
+            <remarks>
+In cases where a caliper is missing one or both edges and no fill edges have been inserted, that caliper is considered to have an area of zero.
+</remarks>
+        </member>
+        <member name="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefect.Size">
+            <summary>
+Gets the length of the path between the first and last points along the segment of the bead path where the defect was detected.
+This length is specified in units defined by the image's
+<see cref="P:Cognex.VisionPro.ICogImage.SelectedSpaceName" />.
+</summary>
+        </member>
+        <member name="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefect.EndPositionY">
+            <summary>
+Gets the y-coordinate of the last point along the segment of the bead path where the defect was detected.
+This coordinate is specified in units defined by the image's
+<see cref="P:Cognex.VisionPro.ICogImage.SelectedSpaceName" />.
+</summary>
+        </member>
+        <member name="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefect.EndPositionX">
+            <summary>
+Gets the x-coordinate of the last point along the segment of the bead path where the defect was detected.
+This coordinate is specified in units defined by the image's
+<see cref="P:Cognex.VisionPro.ICogImage.SelectedSpaceName" />.
+</summary>
+        </member>
+        <member name="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefect.StartPositionY">
+            <summary>
+Gets the y-coordinate of the first point along the segment of the bead path where the defect was detected.
+This coordinate is specified in units defined by the image's
+<see cref="P:Cognex.VisionPro.ICogImage.SelectedSpaceName" />.
+</summary>
+        </member>
+        <member name="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefect.StartPositionX">
+            <summary>
+Gets the x-coordinate of the first point along the segment of the bead path where the defect was detected.
+This coordinate is specified in units defined by the image's
+<see cref="P:Cognex.VisionPro.ICogImage.SelectedSpaceName" />.
+</summary>
+        </member>
+        <member name="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefect.Finalize">
+            <summary>
+Releases all unmanaged resources used by this CogBeadInspectDefect object.
+</summary>
+        </member>
+        <member name="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefect.Dispose">
+            <summary>
+Releases all resources used by this CogBeadInspectDefect object.
+</summary>
+        </member>
+        <member name="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefect.#ctor(Cognex.VisionPro.EdgeInspect.CogBeadInspectDefect)">
+            <summary>
+Constructs a deep copy of the supplied CogBeadInspectDefect object.
+</summary>
+            <param name="other">
+The CogBeadInspectDefect to be copied. Must not be null.
+</param>
+            <exception cref="T:System.ArgumentNullException">
+                <paramref name="other" /> is null.
+</exception>
+            <exception cref="T:System.ObjectDisposedException">
+                <paramref name="other" /> is disposed.
+</exception>
+        </member>
+        <member name="T:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefect">
+            <summary>
+Class that holds a bead inspect defect generated by the 
+<see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.Execute(Cognex.VisionPro.ICogVisionData,Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams)" />
+method.
+</summary>
+            <remarks>
+                <para>
+An instance of this class is returned by the
+<see cref="P:Cognex.VisionPro.Implementation.CogReadOnlyCollectionWithCustomSerialization`1.Item(System.Int32)" />
+property of the
+<see cref="T:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefects" /> class.
+<para>
+      A defect is detected along sections of the bead path where multiple
+      consecutive calipers (see: <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.ConsecutiveFailingCalipersMin" />)
+      fail for one or more of the following reasons:
+
+      <list type="bullet"><item> The bead width measured by the caliper is out of tolerance:
+        the bead is wider than <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.WidthMax" />
+        or narrower than <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.WidthMin" />.
+        </item><item> The bead coverage measured by the caliper is out of tolerance:
+        the bead coverage is larger than <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.CoverageMax" />
+        or smaller than <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.CoverageMin" />.
+        </item><item> The left or right edge of the bead steps sideways
+        (perpendicular to the direction of the path), from one caliper
+        to the next, by an amount that is larger than the <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.StepThreshold" />.
+        </item><item> The left and/or right edge of the bead is missing (and not
+        replaced by a fill edge).
+        </item></list></para></para>
+                <para>
+For each defect, this class provides:
+<list type="bullet"><item> The index of the first and last calipers that comprise the defect.
+  </item><item> The point on the bead path where the defect starts and ends.
+  </item><item> The arc length of the bead path between the start and end ponts.
+  </item><item> The area of the bead measured within the defect.
+  </item><item> The minimum, maximum, and average bead width measured
+         by the calipers within the defect.
+  </item><item> The minimum, maximum, and average bead coverage measured
+         by the calipers within the defect.
+  </item><item> The maximum step sideways from one caliper to the next for
+         both the right and left edge of the bead.
+  </item></list>
+If you want to view the width, coverage, or step values for an
+individual caliper, please see the methods of the 
+<see cref="T:Cognex.VisionPro.EdgeInspect.CogBeadInspectResult" /> class.
+</para>
+                <para>
+For more information on the definition of a bead and bead path in
+this context, please refer to the remarks section of the
+<see cref="T:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern" /> class.
+</para>
+            </remarks>
+        </member>
+        <member name="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectFindResults.#ctor(ciet_beadFindResultSet!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced,System.String)">
+            <summary>
+For Internal Use Only.
+</summary>
+        </member>
+        <member name="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectFindResults.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+Serialization constructor for CogBeadInspectFindResults object.
+</summary>
+            <param name="info">
+The standard SerializationInfo argument.
+</param>
+            <param name="ctxt">
+The standard StreamingContext argument.
+</param>
+        </member>
+        <member name="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectFindResults.#ctor(Cognex.VisionPro.EdgeInspect.CogBeadInspectFindResults)">
+            <summary>
+Constructs a deep copy of the supplied CogBeadInspectFindResults object.
+</summary>
+            <param name="other">
+The CogBeadInspectFindResults to be copied. Must not be null.
+</param>
+            <exception cref="T:System.ArgumentNullException">
+                <paramref name="other" /> is null.
+</exception>
+            <exception cref="T:System.ObjectDisposedException">
+                <paramref name="other" /> is disposed.
+</exception>
+        </member>
+        <member name="T:Cognex.VisionPro.EdgeInspect.CogBeadInspectFindResults">
+            <summary>
+Class that holds a collection of <see cref="T:Cognex.VisionPro.EdgeInspect.CogBeadInspectFindResult" />.
+An instance of this class is created by every call to the <see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.Find" /> method.
+</summary>
+            <remarks>
+Individual results may be accessed through indexing, See below for an example in C#.
+</remarks>
+            <example>
+                <code>
+CogBeadInspectFindResult firstResult = myResults[0];
+CogBeadInspectFindResult secondResult = myResults[1];
+</code>
+            </example>
+        </member>
+        <member name="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectFindResult.GetCoarsePath">
+            <summary>
+Generates the <see cref="T:Cognex.VisionPro.CogGeneralContour" /> that represents the coarse path of this result.
+</summary>
+            <returns>
+The <see cref="T:Cognex.VisionPro.CogGeneralContour" /> that represents the coarse path.
+</returns>
+            <remarks>
+                <para>
+For more information on the definition of a coarse path in this context, please refer to the remarks section of the
+<see cref="T:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern" /> class.
+</para>
+            </remarks>
+        </member>
+        <member name="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectFindResult.#ctor(ciet_beadFindResult!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced,System.String)">
+            <summary>
+Internal use only.
+</summary>
+        </member>
+        <member name="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectFindResult.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+Populates the provided SerializationInfo with the data needed to
+serialize the object.
+</summary>
+            <param name="info">The SerializationInfo to which serialization
+data must be added.</param>
+            <param name="ctxt">The StreamingContext that indicates the intent
+of the current serialization operation.</param>
+        </member>
+        <member name="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectFindResult.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+Serialization constructor for CogBeadInspectFindResult object.
+</summary>
+            <param name="info">
+The standard SerializationInfo argument.
+</param>
+            <param name="ctxt">
+The standard StreamingContext argument.
+</param>
+        </member>
+        <member name="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectFindResult.BeadWidth">
+            <summary>
+Returns the bead width asscociated with this result.
+</summary>
+        </member>
+        <member name="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectFindResult.ContrastThreshold">
+            <summary>
+Returns the contrast threshold of the bead asscociated with this result.
+</summary>
+        </member>
+        <member name="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectFindResult.DarkBead">
+            <summary>
+Returns a flag to indicate whether the bead is darker than the background.
+</summary>
+        </member>
+        <member name="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectFindResult.Finalize">
+            <summary>
+Releases all unmanaged resources used by this CogBeadInspectFindResult object.
+</summary>
+        </member>
+        <member name="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectFindResult.Dispose">
+            <summary>
+Releases all resources used by this CogBeadInspectFindResult object.
+</summary>
+        </member>
+        <member name="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectFindResult.#ctor(Cognex.VisionPro.EdgeInspect.CogBeadInspectFindResult)">
+            <summary>
+Constructs a deep copy of the supplied CogBeadInspectFindResult object.
+</summary>
+            <param name="other">
+The CogBeadInspectFindResult to be copied. Must not be null.
+</param>
+            <exception cref="T:System.ArgumentNullException">
+                <paramref name="other" /> is null.
+</exception>
+            <exception cref="T:System.ObjectDisposedException">
+                <paramref name="other" /> is disposed.
+</exception>
+        </member>
+        <member name="T:Cognex.VisionPro.EdgeInspect.CogBeadInspectFindResult">
+            <summary>
+Class that holds a coarse path generated by the <see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.Find" /> method.
+</summary>
+            <remarks>
+                <para>
+An instance of this class is returned by the
+<see cref="P:Cognex.VisionPro.Implementation.CogReadOnlyCollectionWithCustomSerialization`1.Item(System.Int32)" />
+property of the
+<see cref="T:Cognex.VisionPro.EdgeInspect.CogBeadInspectFindResults" /> class.
+</para>
+                <para>
+For more information on the definition of a coarse path in this context, please refer to the remarks section of the
+<see cref="T:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern" /> class.
+</para>
+            </remarks>
+        </member>
+        <member name="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.DestroyMaskAndFillLists">
+            <summary>
+Destroys the existing MaskList, RightFillList, and LeftFillList.
+After this call, the three properties will return null.
+</summary>
+            <event cref="E:Cognex.VisionPro.ICogChangedEvent.Changed">
+Fires when this method changes the
+<see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.MaskList" />,
+<see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.RightFillList" />,
+and/or <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.LeftFillList" /> 
+properties of the RunParams.
+The following state flags may be affected:
+<list type="bullet"><item><see cref="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.SfMaskList" /></item><item><see cref="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.SfRightFillList" /></item><item><see cref="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.SfLeftFillList" /></item></list></event>
+            <remarks>
+                <para>
+      Before masks or fill edges may be used, their lists must be initialized using a <see cref="T:Cognex.VisionPro.EdgeInspect.CogBeadInspectTrainResult" />, 
+      which ensures that the lists are correctly synchronized with the actual number of calipers. When interacting with a new training result 
+      (typically because the Pattern has just been retrained), it is required that the lists be recreated if the number of calipers has changed. 
+      If the number of calipers has not changed, then recreating the lists is not required, but a review is advised to ensure that their positions still 
+      meet expectations. Failure to recreate the lists when required will result in a runtime error until new lists are generated or the current lists are destroyed.
+    </para>
+                <para>
+      Attempting to access the elements or call the methods of an <see cref="T:Cognex.VisionPro.ICogBoolList" /> that has been destroyed by a call to 
+      <see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.DestroyMaskAndFillLists" />  will result in an ObjectDisposedException.
+    </para>
+            </remarks>
+        </member>
+        <member name="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.CopyMaskAndFillLists(Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams)">
+            <summary>
+Copies the MaskList, the RightFillList, and the LeftFillList from
+the given
+<see cref="T:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams" />,
+without changing the size of the existing lists in this object.
+The lists from the given 
+<see cref="T:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams" />
+are truncated, or extended with "false" values, to fit within
+the existing lists.
+</summary>
+            <event cref="E:Cognex.VisionPro.ICogChangedEvent.Changed">
+Fires when this method changes the
+<see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.MaskList" />,
+<see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.RightFillList" />,
+and/or <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.LeftFillList" /> 
+properties.
+The following state flags may be affected:
+<list type="bullet"><item><see cref="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.SfMaskList" /></item><item><see cref="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.SfRightFillList" /></item><item><see cref="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.SfLeftFillList" /></item></list></event>
+            <param name="other">
+The run params whose masks and fill edges will be copied.
+</param>
+            <exception cref="T:System.ArgumentNullException">
+                <paramref name="other" /> is null.
+</exception>
+            <remarks> 
+If the existing lists in this object have a different size than those
+in <paramref name="other" />, here is what happens:
+<list type="bullet"><item> 
+  If the lists in <paramref name="other" /> are longer, only the
+  initial portion of those lists is copied.
+  </item><item> 
+  If the lists in <paramref name="other" /> are shorter, the full lists
+  are copied, and then the copies are extended (at the end) with
+  Boolean "false" values.
+  </item><item> 
+  If the lists in <paramref name="other" /> are null, they are copied
+  as if they contained the correct number of Boolean "false" values.
+  </item><item> 
+  If the existing lists in this object are null, there is no effect.
+  No copying occurs.
+  </item></list></remarks>
+        </member>
+        <member name="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.CreateAndCopyMaskAndFillLists(Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams)">
+            <summary>
+Creates and initializes the MaskList, the RightFillList, and the
+LeftFillList.  This method gets the desired length of the lists from the
+<see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.MaskList" /> 
+property of the given
+<see cref="T:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams" />.
+The lists are then copied from the given
+<see cref="T:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams" />.
+</summary>
+            <event cref="E:Cognex.VisionPro.ICogChangedEvent.Changed">
+Fires when this method changes the
+<see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.MaskList" />,
+<see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.RightFillList" />,
+and/or <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.LeftFillList" /> 
+properties.
+The following state flags may be affected:
+<list type="bullet"><item><see cref="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.SfMaskList" /></item><item><see cref="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.SfRightFillList" /></item><item><see cref="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.SfLeftFillList" /></item></list></event>
+            <param name="other">
+The run params whose masks and fill edges will be copied to create
+the three lists.
+</param>
+            <exception cref="T:System.ArgumentNullException">
+                <paramref name="other" /> is null.
+</exception>
+            <remarks>
+                <para>
+      Before masks or fill edges may be used, their lists must be initialized using a <see cref="T:Cognex.VisionPro.EdgeInspect.CogBeadInspectTrainResult" />, 
+      which ensures that the lists are correctly synchronized with the actual number of calipers. When interacting with a new training result 
+      (typically because the Pattern has just been retrained), it is required that the lists be recreated if the number of calipers has changed. 
+      If the number of calipers has not changed, then recreating the lists is not required, but a review is advised to ensure that their positions still 
+      meet expectations. Failure to recreate the lists when required will result in a runtime error until new lists are generated or the current lists are destroyed.
+    </para>
+                <para>
+      Attempting to access the elements or call the methods of an <see cref="T:Cognex.VisionPro.ICogBoolList" /> that has been destroyed by a call to 
+      <see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.DestroyMaskAndFillLists" />  will result in an ObjectDisposedException.
+    </para>
+                <para>
+Calling this method will destroy all existing mask and fill edge
+lists prior to creating the new lists.
+</para>
+            </remarks>
+        </member>
+        <member name="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.CreateAndCopyMaskAndFillLists(Cognex.VisionPro.EdgeInspect.CogBeadInspectTrainResult)">
+            <summary>
+Creates and initializes the MaskList, the RightFillList, and the
+LeftFillList.  This method gets the desired length of the lists from the
+<see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectTrainResult.NumTrainedCalipers" /> 
+property of the given
+<see cref="T:Cognex.VisionPro.EdgeInspect.CogBeadInspectTrainResult" />.
+The lists are copied from the suggested run params of the given
+<see cref="T:Cognex.VisionPro.EdgeInspect.CogBeadInspectTrainResult" />.
+</summary>
+            <event cref="E:Cognex.VisionPro.ICogChangedEvent.Changed">
+Fires when this method changes the
+<see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.MaskList" />,
+<see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.RightFillList" />,
+and/or <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.LeftFillList" /> 
+properties.
+The following state flags may be affected:
+<list type="bullet"><item><see cref="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.SfMaskList" /></item><item><see cref="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.SfRightFillList" /></item><item><see cref="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.SfLeftFillList" /></item></list></event>
+            <param name="trainResult">
+The trained bead path whose length (in calipers) will be used to
+create the three lists, and whose data will be copied into the lists.
+</param>
+            <exception cref="T:System.ArgumentNullException">
+                <paramref name="trainResult" /> is null.
+</exception>
+            <remarks>
+                <para>
+      Before masks or fill edges may be used, their lists must be initialized using a <see cref="T:Cognex.VisionPro.EdgeInspect.CogBeadInspectTrainResult" />, 
+      which ensures that the lists are correctly synchronized with the actual number of calipers. When interacting with a new training result 
+      (typically because the Pattern has just been retrained), it is required that the lists be recreated if the number of calipers has changed. 
+      If the number of calipers has not changed, then recreating the lists is not required, but a review is advised to ensure that their positions still 
+      meet expectations. Failure to recreate the lists when required will result in a runtime error until new lists are generated or the current lists are destroyed.
+    </para>
+                <para>
+      Attempting to access the elements or call the methods of an <see cref="T:Cognex.VisionPro.ICogBoolList" /> that has been destroyed by a call to 
+      <see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.DestroyMaskAndFillLists" />  will result in an ObjectDisposedException.
+    </para>
+                <para>
+Calling this method will destroy all existing mask and fill edge
+lists prior to creating the new lists.
+</para>
+            </remarks>
+        </member>
+        <member name="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.CreateMaskAndFillLists(Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams)">
+            <summary>
+Creates and initializes the MaskList, the RightFillList, and the
+LeftFillList.  This method gets the desired length of the lists from the
+<see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.MaskList" /> 
+property of the given
+<see cref="T:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams" />.
+The lists are filled with the Boolean value "false".
+</summary>
+            <event cref="E:Cognex.VisionPro.ICogChangedEvent.Changed">
+Fires when this method changes the
+<see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.MaskList" />,
+<see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.RightFillList" />,
+and/or <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.LeftFillList" /> 
+properties.
+The following state flags may be affected:
+<list type="bullet"><item><see cref="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.SfMaskList" /></item><item><see cref="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.SfRightFillList" /></item><item><see cref="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.SfLeftFillList" /></item></list></event>
+            <param name="other">
+The run params whose mask length will be used to create the three lists.
+</param>
+            <exception cref="T:System.ArgumentNullException">
+                <paramref name="other" /> is null.
+</exception>
+            <remarks>
+                <para>
+      Before masks or fill edges may be used, their lists must be initialized using a <see cref="T:Cognex.VisionPro.EdgeInspect.CogBeadInspectTrainResult" />, 
+      which ensures that the lists are correctly synchronized with the actual number of calipers. When interacting with a new training result 
+      (typically because the Pattern has just been retrained), it is required that the lists be recreated if the number of calipers has changed. 
+      If the number of calipers has not changed, then recreating the lists is not required, but a review is advised to ensure that their positions still 
+      meet expectations. Failure to recreate the lists when required will result in a runtime error until new lists are generated or the current lists are destroyed.
+    </para>
+                <para>
+      Attempting to access the elements or call the methods of an <see cref="T:Cognex.VisionPro.ICogBoolList" /> that has been destroyed by a call to 
+      <see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.DestroyMaskAndFillLists" />  will result in an ObjectDisposedException.
+    </para>
+                <para>
+Calling this method will destroy all existing mask and fill edge
+lists prior to creating the new lists.
+</para>
+            </remarks>
+        </member>
+        <member name="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.CreateMaskAndFillLists(Cognex.VisionPro.EdgeInspect.CogBeadInspectTrainResult)">
+            <summary>
+Creates and initializes the MaskList, the RightFillList, and the
+LeftFillList.  This method gets the desired length of the lists from the
+<see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectTrainResult.NumTrainedCalipers" /> 
+property of the given
+<see cref="T:Cognex.VisionPro.EdgeInspect.CogBeadInspectTrainResult" />.
+The lists are filled with the Boolean value "false".
+</summary>
+            <event cref="E:Cognex.VisionPro.ICogChangedEvent.Changed">
+Fires when this method changes the
+<see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.MaskList" />,
+<see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.RightFillList" />,
+and/or <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.LeftFillList" /> 
+properties.
+The following state flags may be affected:
+<list type="bullet"><item><see cref="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.SfMaskList" /></item><item><see cref="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.SfRightFillList" /></item><item><see cref="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.SfLeftFillList" /></item></list></event>
+            <param name="trainResult">
+The trained bead path whose length (in calipers) will be used to
+create the three lists.
+</param>
+            <exception cref="T:System.ArgumentNullException">
+                <paramref name="trainResult" /> is null.
+</exception>
+            <remarks>
+                <para>
+      Before masks or fill edges may be used, their lists must be initialized using a <see cref="T:Cognex.VisionPro.EdgeInspect.CogBeadInspectTrainResult" />, 
+      which ensures that the lists are correctly synchronized with the actual number of calipers. When interacting with a new training result 
+      (typically because the Pattern has just been retrained), it is required that the lists be recreated if the number of calipers has changed. 
+      If the number of calipers has not changed, then recreating the lists is not required, but a review is advised to ensure that their positions still 
+      meet expectations. Failure to recreate the lists when required will result in a runtime error until new lists are generated or the current lists are destroyed.
+    </para>
+                <para>
+      Attempting to access the elements or call the methods of an <see cref="T:Cognex.VisionPro.ICogBoolList" /> that has been destroyed by a call to 
+      <see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.DestroyMaskAndFillLists" />  will result in an ObjectDisposedException.
+    </para>
+                <para>
+Calling this method will destroy all existing mask and fill edge
+lists prior to creating the new lists.
+</para>
+            </remarks>
+        </member>
+        <member name="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.LeftFillList">
+            <summary>
+Gets an <see cref="T:Cognex.VisionPro.ICogBoolList" /> whose Boolean elements indicate which calipers
+along the trained bead path should insert a "fill edge" if no edge is found on the left side 
+(relative to the path direction) of the bead at runtime.
+</summary>
+            <value> 
+Default value is null.
+</value>
+            <remarks>
+                <para>
+      This property will return null until the 
+      <see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.CreateMaskAndFillLists(Cognex.VisionPro.EdgeInspect.CogBeadInspectTrainResult)" />
+      method has been called and will return null again if the 
+      <see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.DestroyMaskAndFillLists" /> method is called.
+    </para>
+                <para>
+      If this property is null, at runtime it will be treated as a list for which all the values are false.
+    </para>
+                <para>
+      Attempting to access the elements or call the methods of an <see cref="T:Cognex.VisionPro.ICogBoolList" /> that has been destroyed by a call to 
+      <see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.DestroyMaskAndFillLists" />  will result in an ObjectDisposedException.
+    </para>
+            </remarks>
+        </member>
+        <member name="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.RightFillList">
+            <summary>
+Gets an <see cref="T:Cognex.VisionPro.ICogBoolList" /> whose Boolean elements indicate which calipers
+along the trained bead path should insert a "fill edge" if no edge is found on the right side 
+(relative to the path direction) of the bead at runtime.
+</summary>
+            <value> 
+Default value is null.
+</value>
+            <remarks>
+                <para>
+      This property will return null until the 
+      <see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.CreateMaskAndFillLists(Cognex.VisionPro.EdgeInspect.CogBeadInspectTrainResult)" />
+      method has been called and will return null again if the 
+      <see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.DestroyMaskAndFillLists" /> method is called.
+    </para>
+                <para>
+      If this property is null, at runtime it will be treated as a list for which all the values are false.
+    </para>
+                <para>
+      Attempting to access the elements or call the methods of an <see cref="T:Cognex.VisionPro.ICogBoolList" /> that has been destroyed by a call to 
+      <see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.DestroyMaskAndFillLists" />  will result in an ObjectDisposedException.
+    </para>
+            </remarks>
+        </member>
+        <member name="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.MaskList">
+            <summary>
+Gets an <see cref="T:Cognex.VisionPro.ICogBoolList" /> whose Boolean elements indicate which calipers
+along the trained bead path should be ignored at runtime when searching for defects.
+</summary>
+            <value> 
+Default value is null.
+</value>
+            <remarks>
+                <para>
+      This property will return null until the 
+      <see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.CreateMaskAndFillLists(Cognex.VisionPro.EdgeInspect.CogBeadInspectTrainResult)" />
+      method has been called and will return null again if the 
+      <see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.DestroyMaskAndFillLists" /> method is called.
+    </para>
+                <para>
+      If this property is null, at runtime it will be treated as a list for which all the values are false.
+    </para>
+                <para>
+      Attempting to access the elements or call the methods of an <see cref="T:Cognex.VisionPro.ICogBoolList" /> that has been destroyed by a call to 
+      <see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.DestroyMaskAndFillLists" />  will result in an ObjectDisposedException.
+    </para>
+            </remarks>
+        </member>
+        <member name="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.StepThresholdEnabled">
+            <summary>
+Gets or sets a flag to indicate whether the <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.StepThreshold" /> tolerance is enabled. 
+If true, <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.StepThreshold" /> will be used at runtime to report defects of type AboveStepThreshold.
+</summary>
+            <remarks>
+                <para>
+      If the user disables <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.StepThresholdEnabled" />,
+    the bead step will not be measured at run-time and <see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectResult.GetCaliperLeftStep(System.Int32)" />, 
+	  <see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectResult.GetCaliperRightStep(System.Int32)" />,
+    <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefect.LeftStepMax" /> and <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefect.RightStepMax" /> will all be reported
+    as zero.
+  </para>
+            </remarks>
+            <event cref="E:Cognex.VisionPro.ICogChangedEvent.Changed">
+Fires when this property changes.
+The following state flag may be affected:
+<list type="bullet"><item><see cref="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.SfStepThresholdEnabled" /></item></list></event>
+            <value> 
+Default value is true.
+</value>
+        </member>
+        <member name="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.StepThreshold">
+            <summary>
+Gets or sets the maximum relative amount an edge position can deviate from neighboring edges. 
+It is specified as a fraction of average bead width at that location. 
+A low value means a closer match and a high value means more tolerance.
+</summary>
+            <remarks>
+                <para>
+      This property only supports float value type precision; up to 5 decimal places (such as 0.00001) can typically be expected to be maintained. 
+      Further precision can be assigned but will be lost (truncated).
+    </para>
+                <br />
+                <para>
+      The average bead width is computed at train time. It averages the bead width from a number of
+      calipers. The number of calipers is specified by the <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.SmoothingFactor" /> train property.
+    </para>
+            </remarks>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+The supplied value is less than or equal to 0 or greater than 1.
+</exception>
+            <event cref="E:Cognex.VisionPro.ICogChangedEvent.Changed">
+Fires when this property changes.
+The following state flag may be affected:
+<list type="bullet"><item><see cref="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.SfStepThreshold" /></item></list></event>
+            <value> 
+Default value is 0.3.
+</value>
+        </member>
+        <member name="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.WidthMaxEnabled">
+            <summary>
+Gets or sets a flag to indicate whether the <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.WidthMax" /> tolerance is enabled. 
+If true, <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.WidthMax" /> will be used at runtime to report defects of type TooWide.
+</summary>
+            <remarks>
+                <para>
+      If the user disables both <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.WidthMinEnabled" /> and <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.WidthMaxEnabled" />,
+	  the bead width will not be measured at run-time and <see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectResult.GetCaliperBeadWidth(System.Int32)" />,
+    <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefect.WidthMin" />,
+    <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefect.WidthMax" />, and
+    <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefect.WidthAvg" />
+    will all be reported as zero.
+  </para>
+            </remarks>
+            <event cref="E:Cognex.VisionPro.ICogChangedEvent.Changed">
+Fires when this property changes.
+The following state flag may be affected:
+<list type="bullet"><item><see cref="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.SfWidthMaxEnabled" /></item></list></event>
+            <value> 
+Default value is false.
+</value>
+        </member>
+        <member name="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.WidthMax">
+            <summary>
+Gets or sets the maximum acceptable width ratio, any ratio above this value can be a defect.
+The ratio is computed using the bead width at runtime to the average bead width at train time.
+</summary>
+            <remarks>
+                <para>
+      This property only supports float value type precision; up to 5 decimal places (such as 0.00001) can typically be expected to be maintained. 
+      Further precision can be assigned but will be lost (truncated).
+    </para>
+                <br />
+                <para>
+      The average bead width is computed at train time. It averages the bead width from a number of
+      calipers. The number of calipers is specified by the <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.SmoothingFactor" /> train property.
+    </para>
+            </remarks>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+The supplied value is less than or equal to 1 or greater than or equal to 10.
+</exception>
+            <event cref="E:Cognex.VisionPro.ICogChangedEvent.Changed">
+Fires when this property changes.
+The following state flag may be affected:
+<list type="bullet"><item><see cref="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.SfWidthMax" /></item></list></event>
+            <value> 
+Default value is 1.5.
+</value>
+        </member>
+        <member name="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.WidthMinEnabled">
+            <summary>
+Gets or sets a flag to indicate whether the <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.WidthMin" /> tolerance is enabled. 
+If true, <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.WidthMin" /> will be used at runtime to report defects of type TooNarrow.
+</summary>
+            <remarks>
+                <para>
+      If the user disables both <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.WidthMinEnabled" /> and <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.WidthMaxEnabled" />,
+	  the bead width will not be measured at run-time and <see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectResult.GetCaliperBeadWidth(System.Int32)" />,
+    <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefect.WidthMin" />,
+    <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefect.WidthMax" />, and
+    <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefect.WidthAvg" />
+    will all be reported as zero.
+  </para>
+            </remarks>
+            <event cref="E:Cognex.VisionPro.ICogChangedEvent.Changed">
+Fires when this property changes.
+The following state flag may be affected:
+<list type="bullet"><item><see cref="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.SfWidthMinEnabled" /></item></list></event>
+            <value> 
+Default value is true.
+</value>
+        </member>
+        <member name="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.WidthMin">
+            <summary>
+Gets or sets the minimum acceptable width ratio, any ratio below this value can be a defect.
+The ratio is computed using the bead width at runtime to the average width at train time.
+</summary>
+            <remarks>
+                <para>
+      This property only supports float value type precision; up to 5 decimal places (such as 0.00001) can typically be expected to be maintained. 
+      Further precision can be assigned but will be lost (truncated).
+    </para>
+                <br />
+                <para>
+      The average bead width is computed at train time. It averages the bead width from a number of
+      calipers. The number of calipers is specified by the <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.SmoothingFactor" /> train property.
+    </para>
+            </remarks>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+The supplied value is less than or equal to 0 or greater than or equal to 1.
+</exception>
+            <event cref="E:Cognex.VisionPro.ICogChangedEvent.Changed">
+Fires when this property changes.
+The following state flag may be affected:
+<list type="bullet"><item><see cref="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.SfWidthMin" /></item></list></event>
+            <value> 
+Default value is 0.5.
+</value>
+        </member>
+        <member name="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.CoverageMaxEnabled">
+            <summary>
+Gets or sets a flag to indicate whether the <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.CoverageMax" /> tolerance is enabled. 
+If true, <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.CoverageMax" /> will be used at runtime to report defects of type Overfill.
+</summary>
+            <remarks>
+                <para>
+      If the user disables both <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.CoverageMinEnabled" /> and <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.CoverageMaxEnabled" />,
+	  the bead coverage will not be measured at run-time and <see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectResult.GetCaliperBeadCoverage(System.Int32)" />,
+    <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefect.CoverageMin" />, 
+    <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefect.CoverageMax" />, and
+    <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefect.CoverageAvg" />
+    will all be reported as zero.
+  </para>
+            </remarks>
+            <event cref="E:Cognex.VisionPro.ICogChangedEvent.Changed">
+Fires when this property changes.
+The following state flag may be affected:
+<list type="bullet"><item><see cref="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.SfCoverageMaxEnabled" /></item></list></event>
+            <value> 
+Default value is false.
+</value>
+        </member>
+        <member name="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.CoverageMax">
+            <summary>
+Gets or sets the maximum acceptable coverage, any coverage above this value can be a defect.
+</summary>
+            <remarks>
+                <para>
+      This property only supports float value type precision; up to 5 decimal places (such as 0.00001) can typically be expected to be maintained. 
+      Further precision can be assigned but will be lost (truncated).
+    </para>
+                <br />
+                <para>
+      The bead coverage is a ratio of the number of bead pixels found at runtime to the 
+      average number of bead pixels found at train time. A "bead pixel" is any pixel 
+      between the two bead edges that has the same polarity (dark or light) as the bead itself. 
+      Often, all of the pixels between the two bead edges are bead pixels, 
+      but there can sometimes be holes in the bead.
+    </para>
+                <br />
+                <para>
+      The average number of bead pixels is computed at train time for each caliper. 
+      This value is computed by averaging the number of bead pixels from neighboring calipers. 
+      The number of calipers to average is specified by the
+      <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.SmoothingFactor" /> train property.
+    </para>
+            </remarks>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+The supplied value is less than or equal to 1 or greater than or equal to 10.
+</exception>
+            <event cref="E:Cognex.VisionPro.ICogChangedEvent.Changed">
+Fires when this property changes.
+The following state flag may be affected:
+<list type="bullet"><item><see cref="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.SfCoverageMax" /></item></list></event>
+            <value> 
+Default value is 1.5.
+</value>
+        </member>
+        <member name="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.CoverageMinEnabled">
+            <summary>
+Gets or sets a flag to indicate whether the <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.CoverageMin" /> tolerance is enabled. 
+If true, <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.CoverageMin" /> will be used at runtime to report defects of type Underfill.
+</summary>
+            <remarks>
+                <para>
+      If the user disables both <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.CoverageMinEnabled" /> and <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.CoverageMaxEnabled" />,
+	  the bead coverage will not be measured at run-time and <see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectResult.GetCaliperBeadCoverage(System.Int32)" />,
+    <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefect.CoverageMin" />, 
+    <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefect.CoverageMax" />, and
+    <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefect.CoverageAvg" />
+    will all be reported as zero.
+  </para>
+            </remarks>
+            <event cref="E:Cognex.VisionPro.ICogChangedEvent.Changed">
+Fires when this property changes.
+The following state flag may be affected:
+<list type="bullet"><item><see cref="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.SfCoverageMinEnabled" /></item></list></event>
+            <value> 
+Default value is true.
+</value>
+        </member>
+        <member name="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.CoverageMin">
+            <summary>
+Gets or sets the minimum acceptable coverage, any coverage below this value can be a defect.
+</summary>
+            <remarks>
+                <para>
+      This property only supports float value type precision; up to 5 decimal places (such as 0.00001) can typically be expected to be maintained. 
+      Further precision can be assigned but will be lost (truncated).
+    </para>
+                <br />
+                <para>
+      The bead coverage is a ratio of the number of bead pixels found at runtime to the 
+      average number of bead pixels found at train time. A "bead pixel" is any pixel 
+      between the two bead edges that has the same polarity (dark or light) as the bead itself. 
+      Often, all of the pixels between the two bead edges are bead pixels, 
+      but there can sometimes be holes in the bead.
+    </para>
+                <br />
+                <para>
+      The average number of bead pixels is computed at train time for each caliper. 
+      This value is computed by averaging the number of bead pixels from neighboring calipers. 
+      The number of calipers to average is specified by the
+      <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.SmoothingFactor" /> train property.
+    </para>
+            </remarks>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+The supplied value is less than or equal to 0 or greater than or equal to 1.
+</exception>
+            <event cref="E:Cognex.VisionPro.ICogChangedEvent.Changed">
+Fires when this property changes.
+The following state flag may be affected:
+<list type="bullet"><item><see cref="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.SfCoverageMin" /></item></list></event>
+            <value> 
+Default value is 0.5.
+</value>
+        </member>
+        <member name="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.ConsecutiveFailingCalipersMin">
+            <summary>
+Gets or sets the minimum number of consecutive failing calipers for a defect to be reported.
+Indirectly this property determines the length (along the bead) of the smallest reported defect.
+</summary>
+            <remarks>
+The bead inspection operation uses calipers to detect edges and performs tolerance checking on each caliper edge.
+The calipers are laid down side by side along the bead with no offset between them.
+The caliper length along the bead is specified by the <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.SamplingDistance" /> train property.
+<br /><br /><para>
+      The bead inspect tool process the image in 2 phases: the first phase is all about calipers, and the second phase is all about defects.
+      <br />
+      Caliper processing consists of the following:
+      <list type="bullet"><item>
+        Lay down the calipers to detect edge pairs. This step uses the ContrastThreshold and AbsoluteDistanceThreshold to determine which edges are considered for scoring.
+      </item><!-- item>
+        Then any missing edges might be "filled" or "masked". This information is usually contained in the train results that is passed to the tool at runtime.
+      </item> --><item>
+          Then the scoring procedure chooses the best pair of edges based on:
+          <list type="bullet"><item>
+              Pair width
+            </item><item>
+              Edge positions
+            </item><item>
+              Consistency with neighboring edge positions
+            </item></list></item></list>
+      After all of this, defects are detected using any of the (five) enabled tolerances of this class (and maybe some non-enable criteria, like, are any edges missing).
+      <br />
+      A defect is reported for any sequence of <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.ConsecutiveFailingCalipersMin" /> (or more) calipers where all of the individual calipers are deemed out of tolerance
+    </para><br /><para>
+      The average bead width is computed at train time. It averages the bead width from a number of
+      calipers. The number of calipers is specified by the <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.SmoothingFactor" /> train property.
+    </para></remarks>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+The supplied value is less than 1 or greater than 10.
+</exception>
+            <event cref="E:Cognex.VisionPro.ICogChangedEvent.Changed">
+Fires when this property changes.
+The following state flag may be affected:
+<list type="bullet"><item><see cref="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.SfConsecutiveFailingCalipersMin" /></item></list></event>
+            <value> 
+Default value is 3 caliper width.
+</value>
+        </member>
+        <member name="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.AbsoluteDistanceThreshold">
+            <summary> 
+Gets or sets the maximum absolute amount an edge position can deviate from a trained edge position.
+It is specified as a fraction of the average bead width.
+</summary>
+            <remarks>
+                <para>
+      This property only supports float value type precision; up to 5 decimal places (such as 0.00001) can typically be expected to be maintained. 
+      Further precision can be assigned but will be lost (truncated).
+    </para>
+                <br />
+                <para>
+      The average bead width is computed at train time. It averages the bead width from a number of
+      calipers. The number of calipers is specified by the <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.SmoothingFactor" /> train property.
+    </para>
+                <br />
+A low value for this tolerance means that both edges of the bead must appear very 
+close to where they were in the training image. 
+A high value means that both edges can drift considerably from their trained location.
+</remarks>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+The supplied value is less than or equal to 0 or greater than 2.
+</exception>
+            <event cref="E:Cognex.VisionPro.ICogChangedEvent.Changed">
+Fires when this property changes.
+The following state flag may be affected:
+<list type="bullet"><item><see cref="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.SfAbsoluteDistanceThreshold" /></item></list></event>
+            <value> 
+Default value is 0.5 (half the bead width).
+</value>
+        </member>
+        <member name="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.ContrastThreshold">
+            <summary>
+Gets or sets the minimum contrast required for detecting the edges of the bead.
+</summary>
+            <remarks>
+                <para>
+      This property only supports float value type precision; up to 5 decimal places (such as 0.00001) can typically be expected to be maintained. 
+      Further precision can be assigned but will be lost (truncated).
+    </para>
+                <br />
+The contrast of an edge is the absolute difference in average pixel 
+values across the edge. A contrast that is greater than the value 
+you specify is considered an edge.
+</remarks>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+The supplied value is less than 1 or greater than 255.
+</exception>
+            <event cref="E:Cognex.VisionPro.ICogChangedEvent.Changed">
+Fires when this property changes.
+The following state flag may be affected:
+<list type="bullet"><item><see cref="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.SfContrastThreshold" /></item></list></event>
+            <value> 
+Default value is 10 pixel values.
+</value>
+        </member>
+        <member name="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+Populates the provided SerializationInfo with the data needed to
+serialize the object.
+</summary>
+            <param name="info">The SerializationInfo to which serialization
+data must be added.</param>
+            <param name="ctxt">The StreamingContext that indicates the intent
+of the current serialization operation.</param>
+        </member>
+        <member name="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+Serialization constructor for CogBeadInspectRunParams object.
+</summary>
+            <param name="info">
+The standard SerializationInfo argument.
+</param>
+            <param name="ctxt">
+The standard StreamingContext argument.
+</param>
+        </member>
+        <member name="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.Finalize">
+            <summary>
+Releases all unmanaged resources used by this CogBeadInspectRunParams object.
+</summary>
+        </member>
+        <member name="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.Dispose">
+            <summary>
+Releases all resources used by this CogBeadInspectRunParams object.
+</summary>
+        </member>
+        <member name="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.#ctor(Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams)">
+            <summary>
+Constructs a deep copy of the supplied CogBeadInspectRunParams object.
+</summary>
+            <param name="other">
+The CogBeadInspectRunParams to be copied. Must not be null.
+</param>
+            <exception cref="T:System.ArgumentNullException">
+                <paramref name="other" /> is null.
+</exception>
+            <exception cref="T:System.ObjectDisposedException">
+                <paramref name="other" /> has been disposed.
+</exception>
+        </member>
+        <member name="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.#ctor">
+            <summary>
+Constructs a default CogBeadInspectRunParams object.
+</summary>
+            <remarks>
+                <para>
+      The parameters in this class define the acceptable tolerances for a bead. 
+      The tolerances can be enabled or disabled, and a defect will be reported 
+      if the bead is outside any enabled tolerance.
+    </para>
+            </remarks>
+        </member>
+        <member name="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.SfLeftFillList">
+            <summary>
+This bit will be set in the EventArgs of a Changed event every time
+the value returned by LeftFillList may have changed.
+</summary>
+        </member>
+        <member name="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.SfRightFillList">
+            <summary>
+This bit will be set in the EventArgs of a Changed event every time
+the value returned by RightFillList may have changed.
+</summary>
+        </member>
+        <member name="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.SfMaskList">
+            <summary>
+This bit will be set in the EventArgs of a Changed event every time
+the value returned by MaskList may have changed.
+</summary>
+        </member>
+        <member name="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.SfStepThresholdEnabled">
+            <summary>
+This bit will be set in the EventArgs of a Changed event every time
+the value returned by StepThresholdEnabled may have changed.
+</summary>
+        </member>
+        <member name="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.SfStepThreshold">
+            <summary>
+This bit will be set in the EventArgs of a Changed event every time
+the value returned by StepThreshold may have changed.
+</summary>
+        </member>
+        <member name="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.SfWidthMaxEnabled">
+            <summary>
+This bit will be set in the EventArgs of a Changed event every time
+the value returned by WidthMaxEnabled may have changed.
+</summary>
+        </member>
+        <member name="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.SfWidthMax">
+            <summary>
+This bit will be set in the EventArgs of a Changed event every time
+the value returned by WidthMax may have changed.
+</summary>
+        </member>
+        <member name="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.SfWidthMinEnabled">
+            <summary>
+This bit will be set in the EventArgs of a Changed event every time
+the value returned by WidthMinEnabled may have changed.
+</summary>
+        </member>
+        <member name="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.SfWidthMin">
+            <summary>
+This bit will be set in the EventArgs of a Changed event every time
+the value returned by WidthMin may have changed.
+</summary>
+        </member>
+        <member name="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.SfCoverageMaxEnabled">
+            <summary>
+This bit will be set in the EventArgs of a Changed event every time
+the value returned by CoverageMaxEnabled may have changed.
+</summary>
+        </member>
+        <member name="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.SfCoverageMax">
+            <summary>
+This bit will be set in the EventArgs of a Changed event every time
+the value returned by CoverageMax may have changed.
+</summary>
+        </member>
+        <member name="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.SfCoverageMinEnabled">
+            <summary>
+This bit will be set in the EventArgs of a Changed event every time
+the value returned by CoverageMinEnabled may have changed.
+</summary>
+        </member>
+        <member name="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.SfCoverageMin">
+            <summary>
+This bit will be set in the EventArgs of a Changed event every time
+the value returned by CoverageMin may have changed.
+</summary>
+        </member>
+        <member name="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.SfConsecutiveFailingCalipersMin">
+            <summary>
+This bit will be set in the EventArgs of a Changed event every time
+the value returned by ConsecutiveFailingCalipersMin may have changed.
+</summary>
+        </member>
+        <member name="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.SfAbsoluteDistanceThreshold">
+            <summary>
+This bit will be set in the EventArgs of a Changed event every time
+the value returned by AbsoluteDistanceThreshold may have changed.
+</summary>
+        </member>
+        <member name="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.SfContrastThreshold">
+            <summary>
+This bit will be set in the EventArgs of a Changed event every time
+the value returned by ContrastThreshold may have changed.
+</summary>
+        </member>
+        <member name="T:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams">
+            <summary>
+Class that holds the BeadInspect run parameters. These parameters
+control how BeadInspect detects defects in the runtime image.
+</summary>
+            <remarks>
+                <para>
+      The parameters in this class define the acceptable tolerances for a bead. 
+      The tolerances can be enabled or disabled, and a defect will be reported 
+      if the bead is outside any enabled tolerance.
+    </para>
+                <para>
+      The bead inspect tool process the image in 2 phases: the first phase is all about calipers, and the second phase is all about defects.
+      <br />
+      Caliper processing consists of the following:
+      <list type="bullet"><item>
+        Lay down the calipers to detect edge pairs. This step uses the ContrastThreshold and AbsoluteDistanceThreshold to determine which edges are considered for scoring.
+      </item><!-- item>
+        Then any missing edges might be "filled" or "masked". This information is usually contained in the train results that is passed to the tool at runtime.
+      </item> --><item>
+          Then the scoring procedure chooses the best pair of edges based on:
+          <list type="bullet"><item>
+              Pair width
+            </item><item>
+              Edge positions
+            </item><item>
+              Consistency with neighboring edge positions
+            </item></list></item></list>
+      After all of this, defects are detected using any of the (five) enabled tolerances of this class (and maybe some non-enable criteria, like, are any edges missing).
+      <br />
+      A defect is reported for any sequence of <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.ConsecutiveFailingCalipersMin" /> (or more) calipers where all of the individual calipers are deemed out of tolerance
+    </para>
+                <para>
+An instance of this class must be provided as an argument to the 
+<see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.Execute(Cognex.VisionPro.ICogVisionData,Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams)" />
+method of the 
+<see cref="T:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern" /> class.
+The Execute() method is called automatically every time you call the 
+<see cref="M:Cognex.VisionPro.ICogTool.Run" /> method of
+the <see cref="T:Cognex.VisionPro.EdgeInspect.CogBeadInspectTool" /> class,
+causing the tool to inspect the bead path in the
+<see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectTool.InputImage" />
+for defects.
+</para>
+                <para>
+For more information on the definition of a bead and bead path in this context, please refer to the remarks section of the
+<see cref="T:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern" /> class.
+</para>
+            </remarks>
+        </member>
+        <member name="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectTrainResult.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+Populates the provided SerializationInfo with the data needed to
+serialize the object.
+</summary>
+            <param name="info">The SerializationInfo to which serialization
+data must be added.</param>
+            <param name="ctxt">The StreamingContext that indicates the intent
+of the current serialization operation.</param>
+        </member>
+        <member name="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectTrainResult.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+Serialization constructor for CogBeadInspectTrainResult object.
+</summary>
+            <param name="info">
+The standard SerializationInfo argument.
+</param>
+            <param name="ctxt">
+The standard StreamingContext argument.
+</param>
+        </member>
+        <member name="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectTrainResult.CreateTrainResultGraphics(Cognex.VisionPro.EdgeInspect.CogBeadInspectTrainResultGraphicConstants,Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams,System.Boolean)">
+            <summary>
+Creates and returns a collection of graphics that depict the trained
+calipers. The graphics can be augmented with information from the 
+<see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.MaskList">mask</see>,
+<see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.RightFillList">right fill</see>, or
+<see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.LeftFillList">left fill</see> 
+lists of the given <paramref name="runParams" />.  The desired
+graphics are specified by the given <paramref name="graphicOptions" />.
+</summary>
+            <param name="graphicOptions">
+A value created by ORing together one or more values from
+<see cref="T:Cognex.VisionPro.EdgeInspect.CogBeadInspectTrainResultGraphicConstants" />.
+</param>
+            <param name="runParams">
+The <see cref="T:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams" />
+that will provide the mask and fill lists to be used when creating
+the requested graphics.  If this argument is null, the mask and fill
+lists from the
+<see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectTrainResult.GetSuggestedRunParams">SuggestedRunParams</see>
+will be used instead.
+</param>
+            <param name="throwIfListsDontMatch">
+If true, this method will throw an exception when the number of boolean
+elements in the mask or fill lists of the provided
+<paramref name="runParams" /> does
+not match the number of trained calipers in this train result.  Otherwise,
+only the mask or fill list elements that exist will be used.
+</param>
+            <returns>
+A <see cref="T:Cognex.VisionPro.CogGraphicInteractiveCollection" />
+filled with the requested graphics.  
+</returns>
+            <exception cref="T:Cognex.VisionPro.EdgeInspect.CogInvalidMaskOrFillEdgeLengthException">
+                <paramref name="throwIfListsDontMatch" /> is true, and the number of
+boolean elements in the mask or fill lists of the provided
+<paramref name="runParams" /> does
+not match the number of trained calipers in this train result.
+</exception>
+            <remarks>
+                <para>
+The items in the returned collection are
+<see cref="T:Cognex.VisionPro.CogCompositeShape" />s that contain one or
+more sub-graphics.  If you request the caliper rectangle (or the
+caliper center) graphics, there will be one CogCompositeShape per trained
+caliper location.  Otherwise, there will be one CogCompositeShape for
+every caliper location that has a "true" in its mask or fill list.
+</para>
+                <para>
+The
+<see cref="P:Cognex.VisionPro.CogCompositeShape.ID" />
+property of each returned CogCompositeShape is set to the index of the 
+corresponding caliper.
+</para>
+                <para>
+The returned graphics and their children have their 
+<see cref="P:Cognex.VisionPro.CogCompositeShape.Interactive" />
+property set to True.
+</para>
+            </remarks>
+        </member>
+        <member name="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectTrainResult.GetCaliperPointMarker(System.Int32)">
+            <summary>
+Returns a <see cref="T:Cognex.VisionPro.CogPointMarker" /> that 
+describes the center of the caliper at the given index.
+</summary>
+            <param name="index">
+The index of the caliper along the trained path.
+</param>
+            <exception cref="T:System.IndexOutOfRangeException">
+The given <paramref name="index" /> is less than zero, or too large
+to index the trained calipers of this train result.
+</exception>
+            <returns>
+A <see cref="T:Cognex.VisionPro.CogPointMarker" />
+that represents the center of the indexed caliper.
+</returns>
+            <remarks>
+The returned point marker will be interactive (i.e. selectable),
+but not draggable. Its rotation will match the rotation of the caliper,
+and it will have its TipText set to the given caliper index.
+</remarks>
+        </member>
+        <member name="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectTrainResult.GetCaliperRectangleAffine(System.Int32)">
+            <summary>
+Returns a <see cref="T:Cognex.VisionPro.CogRectangleAffine" /> that
+describes the caliper at the given index.
+</summary>
+            <param name="index">
+The index of the caliper along the trained path.
+</param>
+            <exception cref="T:System.IndexOutOfRangeException">
+The given <paramref name="index" /> is less than zero, or too large
+to index the trained calipers of this train result.
+</exception>
+            <returns>
+A <see cref="T:Cognex.VisionPro.CogRectangleAffine" />
+that represents the indexed caliper.
+</returns>
+            <remarks>
+The returned affine rectangle will be interactive (i.e. selectable),
+but not draggable.  It will have its TipText set to the given
+caliper index.
+</remarks>
+        </member>
+        <member name="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectTrainResult.GetCaliperCenterLengthsRotationSkew(System.Int32,System.Double@,System.Double@,System.Double@,System.Double@,System.Double@,System.Double@)">
+            <summary>
+Fills the geometric output arguments for the given caliper index.
+The numerical output arguments define the affine rectangle of the
+caliper at the given index along the trained path.
+</summary>
+            <param name="index">
+The index of the caliper along the trained path.
+</param>
+            <exception cref="T:System.IndexOutOfRangeException">
+The given <paramref name="index" /> is less than zero, or too large
+to index the trained calipers of this train result.
+</exception>
+            <remarks>
+If you want a graphic <see cref="T:Cognex.VisionPro.CogRectangleAffine" />
+that describes the caliper (instead of numerical values), please use 
+<see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectTrainResult.GetCaliperRectangleAffine(System.Int32)" />.
+</remarks>
+        </member>
+        <member name="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectTrainResult.NumTrainedCalipers">
+            <summary>
+Gets the total number of calipers that lie along the trained bead path.
+</summary>
+            <value> 
+The number of trained calipers.
+</value>
+        </member>
+        <member name="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectTrainResult.AddCalipersWithinRegionToList(Cognex.VisionPro.ICogRegion,Cognex.VisionPro.ICogBoolList,System.Boolean)">
+            <summary>
+Identifies all trained calipers whose center lies within the given
+<paramref name="region" />.  The index of each such caliper is used
+to set the corresponding boolean entry of <paramref name="listToUpdate" />
+to the given Boolean value.  List entries for all other indices are
+unchanged.
+</summary>
+            <param name="region">
+The <see cref="T:Cognex.VisionPro.ICogRegion" /> that may contain
+trained caliper centers.  Must not be null.
+</param>
+            <param name="listToUpdate">
+The <see cref="T:Cognex.VisionPro.EdgeInspect.ICogBoolList" /> that 
+will be updated with the given Boolean value at the index position of
+every caliper whose center falls within the region.  Must not be null.
+</param>
+            <exception cref="T:System.ArgumentNullException">
+                <paramref name="region" /> is null.
+</exception>
+            <exception cref="T:System.ArgumentNullException">
+                <paramref name="listToUpdate" /> is null.
+</exception>
+            <exception cref="T:Cognex.VisionPro.EdgeInspect.CogInvalidMaskOrFillEdgeLengthException">
+The number of boolean elements in <paramref name="listToUpdate" /> does
+not match the number of trained calipers in this train result.
+</exception>
+        </member>
+        <member name="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectTrainResult.GetSuggestedRunParams">
+            <summary>
+Returns <see cref="T:Cognex.VisionPro.EdgeInpspect.CogBeadInspectRunParams" />
+that are customized for use with this train result.  These "suggested"
+RunParams might be a useful starting point for runtime defect inspection.
+</summary>
+            <returns>
+A <see cref="T:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams" />.
+</returns>
+        </member>
+        <member name="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectTrainResult.GetTrainedPath">
+            <summary>
+Returns a <see cref="T:Cognex.VisionPro.CogGeneralContour" />
+that represents the trained path.
+</summary>
+            <returns>
+A <see cref="T:Cognex.VisionPro.CogGeneralContour" />
+that represents the trained path.
+</returns>
+        </member>
+        <member name="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectTrainResult.Finalize">
+            <summary>
+Releases all unmanaged resources used by this CogBeadInspectTrainResult object.
+</summary>
+        </member>
+        <member name="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectTrainResult.Dispose">
+            <summary>
+Releases all resources used by this CogBeadInspectTrainResult object.
+</summary>
+        </member>
+        <member name="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectTrainResult.#ctor(Cognex.VisionPro.EdgeInspect.CogBeadInspectTrainResult)">
+            <summary>
+Constructs a deep copy of the supplied CogBeadInspectTrainResult object.
+</summary>
+            <param name="other">
+The CogBeadInspectTrainResult to be copied. Must not be null.
+</param>
+            <exception cref="T:System.ArgumentNullException">
+                <paramref name="other" /> is null.
+</exception>
+            <exception cref="T:System.ObjectDisposedException">
+                <paramref name="other" /> is disposed.
+</exception>
+        </member>
+        <member name="T:Cognex.VisionPro.EdgeInspect.CogBeadInspectTrainResult">
+            <summary>
+Class that holds a BeadInspect train result. An instance of this class
+is created by every successful call to the
+<see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.Train" /> method.
+</summary>
+            <remarks>
+                <para>
+The train result holds a smoothed path that represents the center line of
+the trained bead.  A sequence of 
+<see cref="T:Cognex.VisionPro.Caliper.CogCaliperTool" />s
+is laid out along this path and these calipers are used at runtime to
+inspect for defects in the bead.  The number of calipers trained, and
+their positions along the path, are part of the train result.
+</para>
+                <para>
+The train result also provides a "suggested" set of 
+<see cref="T:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams" />.
+These RunParams are tuned for the trained path, and might be a useful
+starting point for runtime defect inspection.
+</para>
+                <para>
+For more information on the definition of a bead or path, please refer to the
+<see cref="T:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern" /> remarks.
+</para>
+            </remarks>
+        </member>
+        <member name="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectFindParams.StartCircle">
+            <summary>
+Gets or Sets the start circle. The center of this circle is used as a starting location by the pattern's
+<see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.Find" /> method.
+</summary>
+            <value> 
+The start circle. Default value is a circle with center at (0,0) and a radius of 100.
+</value>
+            <event cref="E:Cognex.VisionPro.ICogChangedEvent.Changed">
+Fires when this property changes.
+The following state flags may be affected:
+<list type="bullet"><item><see cref="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectFindParams.SfStartCircle" /></item></list></event>
+            <remarks>
+                <para>
+The start circle should be placed such that both edges of the bead are
+within it and that the center of the circle is as close to the middle
+of the bead as possible. The tool's attempts to find the bead edges may
+extend slightly past the circle edges, but you should not rely upon
+this behavior.  For best results, you should set the circle diameter to
+be 10% to 30% wider than the bead.
+</para>
+                <para>
+Please see the <see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.Find" /> method remarks section for more details on how
+the path finding is performed. See the <see cref="T:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern" /> remarks for definitions of "bead" and "path".
+</para>
+                <para>
+The StartCircle should not be mistaken for a region; it defines a starting point rather than the area over which a find operation will take place.
+</para>
+            </remarks>
+        </member>
+        <member name="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectFindParams.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+Populates the provided SerializationInfo with the data needed to
+serialize the object.
+</summary>
+            <param name="info">The SerializationInfo to which serialization
+data must be added.</param>
+            <param name="ctxt">The StreamingContext that indicates the intent
+of the current serialization operation.</param>
+        </member>
+        <member name="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectFindParams.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+Serialization constructor for CogBeadInspectFindParams object.
+</summary>
+            <param name="info">
+The standard SerializationInfo argument.
+</param>
+            <param name="ctxt">
+The standard StreamingContext argument.
+</param>
+        </member>
+        <member name="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectFindParams.Finalize">
+            <summary>
+Releases all unmanaged resources used by this CogBeadInspectFindParams object.
+</summary>
+        </member>
+        <member name="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectFindParams.Dispose">
+            <summary>
+Releases all resources used by this CogBeadInspectFindParams object.
+</summary>
+        </member>
+        <member name="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectFindParams.BeadWidth">
+            <summary>
+Gets or sets the width of the bead to search for.
+</summary>
+            <remarks>
+                <para>
+      This property only supports float value type precision; up to 5 decimal places (such as 0.00001) can typically be expected to be maintained. 
+      Further precision can be assigned but will be lost (truncated).
+    </para>
+            </remarks>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+The supplied value is less than or equal to 0 or greater than Single.MaxValue (3.402823E+38).
+</exception>
+            <event cref="E:Cognex.VisionPro.ICogChangedEvent.Changed">
+Fires when this property changes.
+The following state flag may be affected:
+<list type="bullet"><item><see cref="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectFindParams.SfBeadWidth" /></item></list></event>
+            <value> 
+Default value is 10.
+</value>
+        </member>
+        <member name="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectFindParams.ContrastThreshold">
+            <summary>
+Gets or sets the contrast threshold used to detect the bead edges. 
+</summary>
+            <remarks>
+                <para>
+      This property only supports float value type precision; up to 5 decimal places (such as 0.00001) can typically be expected to be maintained. 
+      Further precision can be assigned but will be lost (truncated).
+    </para>
+            </remarks>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+The supplied value is less than 1 or greater than 255.
+</exception>
+            <event cref="E:Cognex.VisionPro.ICogChangedEvent.Changed">
+Fires when this property changes.
+The following state flag may be affected:
+<list type="bullet"><item><see cref="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectFindParams.SfContrastThreshold" /></item></list></event>
+            <value> 
+Default value is 10.
+</value>
+        </member>
+        <member name="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectFindParams.DarkBead">
+            <summary>
+Gets or sets the flag to indicate whether the bead is darker than the background.
+</summary>
+            <event cref="E:Cognex.VisionPro.ICogChangedEvent.Changed">
+Fires when this property changes.
+The following state flag may be affected:
+<list type="bullet"><item><see cref="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectFindParams.SfDarkBead" /></item></list></event>
+            <value> 
+Default value is true.
+</value>
+        </member>
+        <member name="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectFindParams.AutoCompute">
+            <summary>
+Gets or sets the flag to indicate whether the ContrastThreshold, the BeadWidth, 
+and the DarkBead properties are computed automatically.
+</summary>
+            <event cref="E:Cognex.VisionPro.ICogChangedEvent.Changed">
+Fires when this property changes.
+The following state flag may be affected:
+<list type="bullet"><item><see cref="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectFindParams.SfAutoCompute" /></item></list></event>
+            <value> 
+Default value is false.
+</value>
+        </member>
+        <member name="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectFindParams.MaxNumResults">
+            <summary>
+Gets or sets the maximum number of results to return. 
+Each result represents a possible bead path that the algorithm found.
+</summary>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+The supplied value is less than 1 or greater than 5.
+</exception>
+            <event cref="E:Cognex.VisionPro.ICogChangedEvent.Changed">
+Fires when this property changes.
+The following state flag may be affected:
+<list type="bullet"><item><see cref="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectFindParams.SfMaxWidthDeviation" /></item></list></event>
+            <value> 
+Default value is 5.
+</value>
+        </member>
+        <member name="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectFindParams.MaxWidthDeviation">
+            <summary>
+Gets or sets the maximum allowable bead width change specified as a fraction of the bead width.
+</summary>
+            <remarks>
+                <para>
+      This property only supports float value type precision; up to 5 decimal places (such as 0.00001) can typically be expected to be maintained. 
+      Further precision can be assigned but will be lost (truncated).
+    </para>
+            </remarks>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+The supplied value is less than or equal to 0 or greater than 1.
+</exception>
+            <event cref="E:Cognex.VisionPro.ICogChangedEvent.Changed">
+Fires when this property changes.
+The following state flag may be affected:
+<list type="bullet"><item><see cref="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectFindParams.SfMaxWidthDeviation" /></item></list></event>
+            <value> 
+Default value is 0.4.
+</value>
+        </member>
+        <member name="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectFindParams.MaxSkipCount">
+            <summary>
+Gets or sets the maximum acceptable GAP length along the bead during the find. 
+It is defined by how many jumps the algorithm can continue searching for a bead along 
+its current direction. The count refers to the number of jumps. 
+The size of each jump is based on the bead width.
+</summary>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+The supplied value is less than 0 or greater than 10.
+</exception>
+            <event cref="E:Cognex.VisionPro.ICogChangedEvent.Changed">
+Fires when this property changes.
+The following state flag may be affected:
+<list type="bullet"><item><see cref="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectFindParams.SfMaxSkipCount" /></item></list></event>
+            <value> 
+Default value is 1.
+</value>
+        </member>
+        <member name="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectFindParams.#ctor(Cognex.VisionPro.EdgeInspect.CogBeadInspectFindParams)">
+            <summary>
+Constructs a deep copy of the supplied CogBeadInspectFindParams object.
+</summary>
+            <param name="other">
+The CogBeadInspectFindParams to be copied. Must not be null.
+</param>
+            <exception cref="T:System.ArgumentNullException">
+                <paramref name="other" /> is null.
+</exception>
+            <exception cref="T:System.ObjectDisposedException">
+                <paramref name="other" /> has been disposed.
+</exception>
+        </member>
+        <member name="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectFindParams.#ctor">
+            <summary>
+Constructs a default CogBeadInspectFindParams object.
+</summary>
+        </member>
+        <member name="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectFindParams.SfStartCircle">
+            <summary>
+This bit will be set in the EventArgs of a Changed event every time
+the value returned by StartCircle may have changed.
+</summary>
+        </member>
+        <member name="T:Cognex.VisionPro.EdgeInspect.CogBeadInspectFindParams">
+            <summary>
+This class holds the parameters used to find coarse paths in a training image.
+</summary>
+            <remarks>
+                <para>
+Instances of this class are held by the <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.FindParams" />
+property of a <see cref="T:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern" /> object.
+You can call the pattern's <see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.Find" />
+method to locate coarse paths in the <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.TrainImage" />
+of that pattern. Calling <see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.Find" />
+will automatically use the contained instance of this class to control how the paths are found.
+</para>
+                <para>
+If any properties of this class are changed, the containing pattern will discard all coarse paths held
+by that pattern and the pattern's <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.Found" />
+property will return false. This will also untrain the pattern if it was previously trained.
+</para>
+                <para>
+For more information on the definition of a coarse path in this context, please refer to the remarks section of the
+<see cref="T:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern" /> class.
+</para>
+            </remarks>
+        </member>
+        <member name="T:Cognex.VisionPro.EdgeInspect.CogBeadInspectTrainResultGraphicConstants">
+            <summary>
+Constants used to specify the desired train result graphics
+</summary>
+        </member>
+        <member name="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectTrainResultGraphicConstants.All">
+            <summary>
+Draw all result graphics.
+</summary>
+        </member>
+        <member name="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectTrainResultGraphicConstants.RightFillEdge">
+            <summary>
+Draw a yellow line segment in any caliper where you have enabled a
+right fill edge.  The line will be placed to the right of the caliper
+center (as you travel in the direction of the trained path).
+</summary>
+        </member>
+        <member name="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectTrainResultGraphicConstants.LeftFillEdge">
+            <summary>
+Draw a yellow line segment in any caliper where you have enabled a
+left fill edge.  The line will be placed to the left of the caliper
+center (as you travel in the direction of the trained path).
+</summary>
+        </member>
+        <member name="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectTrainResultGraphicConstants.Mask">
+            <summary>
+Draw an orange circle around the center of any caliper that is masked.
+</summary>
+        </member>
+        <member name="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectTrainResultGraphicConstants.ColorCaliperGraphics">
+            <summary>
+Draw the caliper rectangles (if selected) and the caliper centers (if
+selected) in colors that reflect whether the calipers are masked,
+and/or have fill edges.  Masked calipers are orange, un-masked
+calipers with fill edges are yellow.
+</summary>
+        </member>
+        <member name="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectTrainResultGraphicConstants.CaliperRectangle">
+            <summary>
+Draw an affine rectangle outline of each trained caliper.
+</summary>
+        </member>
+        <member name="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectTrainResultGraphicConstants.CaliperCenter">
+            <summary>
+Draw a crosshair graphic at the center of each trained caliper.
+</summary>
+        </member>
+        <member name="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectTrainResultGraphicConstants.TipText">
+            <summary>
+Add tip text for the train result graphics.
+</summary>
+        </member>
+        <member name="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectTrainResultGraphicConstants.None">
+            <summary>
+Do not draw any train result graphics.
+</summary>
+        </member>
+        <member name="T:Cognex.VisionPro.EdgeInspect.CogBeadInspectLastRunRecordDiagConstants">
+            <summary>
+Enumeration of diagnostic data that can be provided in the
+Tool's LastRunRecord.
+</summary>
+        </member>
+        <member name="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectLastRunRecordDiagConstants.All">
+            <summary>
+Include all of the diagnostic data in the LastRunRecord.
+</summary>
+        </member>
+        <member name="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectLastRunRecordDiagConstants.InputImageDeepCopy">
+            <summary>
+Include a deep copy of the input image in the LastRunRecord.
+</summary>
+        </member>
+        <member name="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectLastRunRecordDiagConstants.InputImageByReference">
+            <summary>
+Include a reference to the input image in the LastRunRecord.
+</summary>
+        </member>
+        <member name="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectLastRunRecordDiagConstants.None">
+            <summary>
+Do not include any diagnostic data in the LastRunRecord.
+</summary>
+        </member>
+        <member name="T:Cognex.VisionPro.EdgeInspect.CogBeadInspectLastRunRecordConstants">
+            <summary>
+Enumeration of non-diagnostic data that can be provided in
+the Tool's LastRunRecord.
+</summary>
+        </member>
+        <member name="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectLastRunRecordConstants.All">
+            <summary>
+Include all of the non-diagnostic data in the LastRunRecord.
+</summary>
+        </member>
+        <member name="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectLastRunRecordConstants.BeadPath">
+            <summary>
+Show bead path in the LastRunRecord.
+</summary>
+        </member>
+        <member name="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectLastRunRecordConstants.DefectAreas">
+            <summary>
+Show defects areas in the LastRunRecord.
+</summary>
+        </member>
+        <member name="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectLastRunRecordConstants.None">
+            <summary>
+Do not include any non-diagnostic data in the LastRunRecord.
+</summary>
+        </member>
+        <member name="T:Cognex.VisionPro.EdgeInspect.CogBeadInspectCurrentRecordConstants">
+            <summary>
+Enumeration of data that can be provided in the Tool's
+CurrentRecord.
+</summary>
+        </member>
+        <member name="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectCurrentRecordConstants.All">
+            <summary>
+Include all possible records in the CurrentRecord by setting all the bits.
+</summary>
+        </member>
+        <member name="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectCurrentRecordConstants.TrainedCalipers">
+            <summary>
+If set, include the <see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectTrainResult.GetCaliperRectangleAffine(System.Int32)">trained calipers</see> in the CurrentRecord.
+</summary>
+        </member>
+        <member name="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectCurrentRecordConstants.UseSuggestedMaskAndFill">
+            <summary>
+If set, use the <see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectTrainResult.GetSuggestedRunParams">SuggestedRunParams</see> from
+the training results for the mask and fill graphics.
+Otherwise, use the <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectTool.RunParams">configured run params</see> when MaskAndFillGraphics is set.
+</summary>
+        </member>
+        <member name="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectCurrentRecordConstants.MaskAndFillGraphics">
+            <summary>
+If set, include the <see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.MaskList">mask</see>,
+<see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.RightFillList">right</see> fill and
+<see cref="P:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams.LeftFillList">left</see> fill
+graphics in the CurrentRecord.
+</summary>
+        </member>
+        <member name="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectCurrentRecordConstants.CurrentCoarsePath">
+            <summary>
+If set, include the bead find current coarse path in the CurrentRecord.
+</summary>
+        </member>
+        <member name="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectCurrentRecordConstants.TrainedPath">
+            <summary>
+If set, include the bead trained path in the CurrentRecord.
+</summary>
+        </member>
+        <member name="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectCurrentRecordConstants.CoarsePathUsedInTrain">
+            <summary>
+If set, include the bead find coarse path used in the CurrentRecord.
+</summary>
+        </member>
+        <member name="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectCurrentRecordConstants.StartCircle">
+            <summary>
+If set, include the start circle in the CurrentRecord.
+</summary>
+        </member>
+        <member name="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectCurrentRecordConstants.TrainImage">
+            <summary>
+If set, include the train image in the CurrentRecord.
+</summary>
+        </member>
+        <member name="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectCurrentRecordConstants.InputImage">
+            <summary>
+If set, include the input image in the CurrentRecord.
+</summary>
+        </member>
+        <member name="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectCurrentRecordConstants.None">
+            <summary>
+Do not include any records in the CurrentRecord by resetting all the bits.
+</summary>
+        </member>
+        <member name="T:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefectTypeConstants">
+            <summary>
+Enumeration of defect categories that can be detected within a runtime image by the BeadInspect Tool.
+</summary>
+            <remarks>
+                <para>
+For more information on the definition of a bead and bead path in this context, please refer to the remarks section of the
+<see cref="T:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern" /> class.
+</para>
+                <para>
+Coverage as used in the context of this enumeration describes how consistent the contrast of the bead is when compared
+to the trained bead. For example, a dark bead on a light background that has a small section of high intensity within it
+that did not exist within the trained bead path would be considered an Underfill defect.
+</para>
+            </remarks>
+        </member>
+        <member name="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefectTypeConstants.NoBeadFound">
+            <summary>
+No bead was located.
+</summary>
+        </member>
+        <member name="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefectTypeConstants.MissingLeftEdge">
+            <summary>
+The left-hand bead edge along the direction of the bead path could not be located.
+</summary>
+        </member>
+        <member name="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefectTypeConstants.MissingRightEdge">
+            <summary>
+The right-hand bead edge along the direction of the bead path could not be located.
+</summary>
+        </member>
+        <member name="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefectTypeConstants.MissingBothEdges">
+            <summary>
+Both bead edges could not be located.
+</summary>
+        </member>
+        <member name="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefectTypeConstants.AboveStepThreshold">
+            <summary>
+One or both located bead edges deviate from their corresponding same-side previous bead edges along
+the direction of the bead path by an amount above what is allowed by the step threshold tolerance.
+</summary>
+        </member>
+        <member name="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefectTypeConstants.TooWide">
+            <summary>
+The located bead is above the tolerance set for maximum width of the bead.
+</summary>
+        </member>
+        <member name="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefectTypeConstants.TooNarrow">
+            <summary>
+The located bead is below the tolerance set for minimum width of the bead.
+</summary>
+        </member>
+        <member name="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefectTypeConstants.Overfill">
+            <summary>
+The located bead is above the maximum tolerance set for consistency of coverage.
+</summary>
+        </member>
+        <member name="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefectTypeConstants.Underfill">
+            <summary>
+The located bead is below the minimum tolerance set for consistency of coverage.
+</summary>
+        </member>
+        <member name="F:Cognex.VisionPro.EdgeInspect.CogBeadInspectDefectTypeConstants.None">
+            <summary>
+No defect is detected.
+</summary>
+        </member>
+        <member name="T:Cognex.VisionPro.EdgeInspect.CogIllegalTrainingParamAtRuntimeException">
+            <summary>
+This exception is thrown if you attempt to call the
+<see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.Execute(Cognex.VisionPro.ICogVisionData,Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams)" />
+method of a
+<see cref="T:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern" />
+using an image whose coordinate space deviates enough from the coordinate space used to train
+and has caused either the expected bead width or caliper spacing trained to now be out of bounds
+</summary>
+        </member>
+        <member name="T:Cognex.VisionPro.EdgeInspect.CogInvalidMaskOrFillEdgeLengthException">
+            <summary>
+This exception is thrown if you attempt to call the
+<see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.Execute(Cognex.VisionPro.ICogVisionData,Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams)" />
+method of a
+<see cref="T:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern" />
+with a 
+<see cref="T:Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams" />
+provided that has mask or fill edge lists whose lengths differ from the number of calipers
+present in the currently trained path.
+</summary>
+        </member>
+        <member name="T:Cognex.VisionPro.EdgeInspect.CogOperatorFindNotRunException">
+            <summary>
+This exception is thrown if you attempt to call the
+<see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.Train" />
+or
+<see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.Execute(Cognex.VisionPro.ICogVisionData,Cognex.VisionPro.EdgeInspect.CogBeadInspectRunParams)" />
+method of a
+<see cref="T:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern" />
+before calling its
+<see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.Find" />
+method.
+</summary>
+        </member>
+        <member name="T:Cognex.VisionPro.EdgeInspect.CogImageMisMatchException">
+            <summary>
+This exception is thrown if you call the
+<see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.Train" />
+method of a
+<see cref="T:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern" />
+after the training image or its coordinate tree has been updated. This exception may be prevented by calling the
+<see cref="M:Cognex.VisionPro.EdgeInspect.CogBeadInspectPattern.Find" />
+method again.
+</summary>
+        </member>
+        <member name="T:ciet_shapeType">
+The type of shape used to populate a result structure 
+</member>
+        <!-- Discarding badly formed XML document comment for member 'M:ciet_initAffineRectFromPoints(cmath_shapeAffineRect*,cmath_vect!System.Runtime.CompilerServices.IsConst*,cmath_vect!System.Runtime.CompilerServices.IsConst*,System.Single,System.Single)'. -->
+    </members>
+</doc>
